@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { use, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -134,7 +134,7 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
                         <Link href="https://github.com/Aamod007" target="_blank" className="p-2 text-muted-foreground hover:text-primary transition-colors bg-secondary/10 rounded-lg hover:bg-primary/10">
                             <Github className="w-4 h-4" />
                         </Link>
-                        <Link href="https://medium.com/@arfazrll" target="_blank" className="p-2 text-muted-foreground hover:text-primary transition-colors bg-secondary/10 rounded-lg hover:bg-primary/10">
+                        <Link href="https://medium.com/@aamod" target="_blank" className="p-2 text-muted-foreground hover:text-primary transition-colors bg-secondary/10 rounded-lg hover:bg-primary/10">
                             <BookOpen className="w-4 h-4" />
                         </Link>
                     </div>

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { cn } from "@/lib/utils";
 import React, { useState, useEffect, useRef } from "react";
@@ -25,7 +25,7 @@ import { motion, AnimatePresence, useInView, animate } from 'framer-motion';
 import { useIsInStack } from './showcase-stack';
 import { useLenis } from 'lenis/react';
 
-const GITHUB_USER = "Arfazrll";
+const GITHUB_USER = "Aamod007";
 
 const PINNED_REPOS = [
   {

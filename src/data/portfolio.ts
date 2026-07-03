@@ -1,4 +1,4 @@
-import { PortfolioData } from '@/types';
+﻿import { PortfolioData } from '@/types';
 
 export const portfolioData: PortfolioData = {
     personal: {
@@ -6,12 +6,12 @@ export const portfolioData: PortfolioData = {
         title: 'AI Engineer',
         subtitle: 'AI Engineer • Software Engineer | Bridging Technical Innovation with Strategic Execution',
         bio: 'An Information Technology student at Telkom University with a distinctive profile that fuses deep technical expertise in Artificial Intelligence with proven strategic leadership. Through hands-on experience as an AI Researcher at the Cyber Physical System Laboratory, I develop complex technical solutions from architecting IoT systems and designing software blueprints to engineering advanced Machine Learning models. Currently exploring AI Agents and Blockchain/Web3 technologies. Driven to leverage this integrated skill set to build initiatives that bridge technical innovation with effective execution.',
-        avatar: '/about/arfazrll.jpeg',
+        avatar: '/about/aamod.jpeg',
         location: 'DKI Jakarta, Indonesia',
-        email: 'azril4974@gmail.com',
+        email: 'aamod@gmail.com',
         phone: '+6281511463282',
         resumeUrl: '/resume',
-        website: 'https://personal-iqyuflz4z-arfazrlls-projects.vercel.app',
+        website: 'https://personal-iqyuflz4z-aamods-projects.vercel.app',
         languages: [
             { name: 'Indonesian', level: 'Native' },
             { name: 'English', level: 'Limited Working' },
@@ -38,19 +38,19 @@ export const portfolioData: PortfolioData = {
             },
             {
                 platform: 'Twitter',
-                url: 'https://twitter.com/arfazrll',
+                url: 'https://twitter.com/aamod',
                 icon: 'twitter',
                 username: 'Aamod007',
             },
             {
                 platform: 'Discord',
-                url: 'https://discord.com/users/arfazrll',
+                url: 'https://discord.com/users/aamod',
                 icon: 'discord',
                 username: 'Aamod007',
             },
             {
                 platform: 'Spotify',
-                url: 'https://open.spotify.com/user/arfazrll',
+                url: 'https://open.spotify.com/user/aamod',
                 icon: 'spotify',
                 username: 'Azrll',
             },
@@ -245,7 +245,7 @@ export const portfolioData: PortfolioData = {
             techStack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Three.js', 'Framer Motion', 'GSAP'],
             tools: ['VS Code', 'Figma', 'GitHub'],
             status: 'completed',
-            demoUrl: 'https://syahrilarfianalmazril.vercel.app',
+            demoUrl: 'https://aamodkumar.vercel.app',
             repoUrl: 'https://github.com/Aamod007/PersonalBlog',
             startDate: '2025-01-20',
             highlights: ['3D animations', 'Scroll effects', 'Bilingual EN/ID'], // Keep for backward compatibility if needed, or rely on features
@@ -1612,7 +1612,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             tools: ['Jupyter Notebook', 'Hugging Face Spaces', 'Pandas', 'Seaborn', 'SMOTE'],
             status: 'completed',
             repoUrl: 'https://github.com/Aamod007/CreditRisk_Analysis',
-            demoUrl: 'https://huggingface.co/spaces/Alfazril/CreditRisk_Analysis',
+            demoUrl: 'https://huggingface.co/spaces/Aamod/CreditRisk_Analysis',
             startDate: '2025-07-01',
             role: 'Data Scientist',
             customTimeline: 'July 2025',
@@ -2292,7 +2292,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             location: 'Bandung',
             type: 'contract',
             logo: '/assets/logogdsc.jpg',
-            externalLink: 'https://g.dev/Arfazrll',
+            externalLink: 'https://g.dev/Aamod007',
         },
     ],
     education: [
@@ -2421,7 +2421,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             title: 'elevAIte with Dicoding Program 2025',
             issuer: 'Dicoding Indonesia',
             date: '2025-01-01',
-            credentialUrl: 'https://learn.microsoft.com/en-us/users/arfazrlll-6195/achievements/8752dbgw',
+            credentialUrl: 'https://learn.microsoft.com/en-us/users/aamodl-6195/achievements/8752dbgw',
             category: 'certification',
             image: '/certificate/elevAIte with Dicoding Program 2025.png',
         },
@@ -2750,7 +2750,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             date: '2026-03-20',
             category: 'applied-ai',
             tags: ['AI', 'Agents', 'Enterprise'],
-            author: { name: 'Azril', avatar: '/about/arfazrll.jpeg' },
+            author: { name: 'Aamod', avatar: '/about/aamod.jpeg' },
             readTime: '5'
         },
         {
@@ -2763,7 +2763,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             date: '2026-03-15',
             category: 'more',
             tags: ['Web3', 'Blockchain', 'UX'],
-            author: { name: 'Azril', avatar: '/about/arfazrll.jpeg' },
+            author: { name: 'Aamod', avatar: '/about/aamod.jpeg' },
             readTime: '4'
         },
         {
@@ -2776,7 +2776,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             date: '2026-03-05',
             category: 'software-development',
             tags: ['Next.js', 'React', 'Performance'],
-            author: { name: 'Azril', avatar: '/about/arfazrll.jpeg' },
+            author: { name: 'Aamod', avatar: '/about/aamod.jpeg' },
             readTime: '6'
         },
         {
@@ -2789,7 +2789,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             date: '2026-02-28',
             category: 'applied-ai',
             tags: ['AI', 'Security', 'Deep Learning'],
-            author: { name: 'Azril', avatar: '/about/arfazrll.jpeg' },
+            author: { name: 'Aamod', avatar: '/about/aamod.jpeg' },
             readTime: '7'
         },
         {
@@ -2802,7 +2802,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             date: '2026-02-15',
             category: 'applied-ai',
             tags: ['LLM', 'Python', 'Ollama'],
-            author: { name: 'Azril', avatar: '/about/arfazrll.jpeg' },
+            author: { name: 'Aamod', avatar: '/about/aamod.jpeg' },
             readTime: '8'
         },
         {
@@ -2815,7 +2815,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             date: '2026-02-01',
             category: 'more',
             tags: ['Solidity', 'Ethereum', 'Security'],
-            author: { name: 'Azril', avatar: '/about/arfazrll.jpeg' },
+            author: { name: 'Aamod', avatar: '/about/aamod.jpeg' },
             readTime: '5'
         },
         {
@@ -2828,7 +2828,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             date: '2026-01-25',
             category: 'software-development',
             tags: ['React', 'Zustand', 'Architecture'],
-            author: { name: 'Azril', avatar: '/about/arfazrll.jpeg' },
+            author: { name: 'Aamod', avatar: '/about/aamod.jpeg' },
             readTime: '4'
         },
         {
@@ -2841,7 +2841,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             date: '2026-01-10',
             category: 'software-development',
             tags: ['IoT', 'ESP32', 'Edge'],
-            author: { name: 'Azril', avatar: '/about/arfazrll.jpeg' },
+            author: { name: 'Aamod', avatar: '/about/aamod.jpeg' },
             readTime: '6'
         },
         {
@@ -2854,7 +2854,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             date: '2026-01-05',
             category: 'applied-ai',
             tags: ['Healthcare', 'AI', 'Ethics'],
-            author: { name: 'Azril', avatar: '/about/arfazrll.jpeg' },
+            author: { name: 'Aamod', avatar: '/about/aamod.jpeg' },
             readTime: '7'
         },
         {
@@ -2867,7 +2867,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             date: '2026-03-31',
             category: 'about-me',
             tags: ['Philosophy', 'Engineering', 'About Me'],
-            author: { name: 'Azril', avatar: '/about/arfazrll.jpeg' },
+            author: { name: 'Aamod', avatar: '/about/aamod.jpeg' },
             readTime: '5'
         }
     ],

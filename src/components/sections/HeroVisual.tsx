@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+﻿import React, { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Separator } from "@/components/ui/separator";
 import { Github, Linkedin, Instagram, ArrowDown, ArrowDownRight, Bot, Zap, ExternalLink, MessageSquare } from 'lucide-react';
@@ -234,7 +234,7 @@ export function HeroVisual({ isExiting = false }: { isExiting?: boolean }) {
                 <div 
                   ref={zapRef} 
                   className="hidden lg:block mx-[0.05em] relative cursor-pointer group"
-                  onClick={() => window.open('https://arfazrllworkspace.vercel.app/', '_blank')}
+                  onClick={() => window.open('https://aamodworkspace.vercel.app/', '_blank')}
                   onMouseEnter={(e) => setTooltip({ show: true, text: "Go to Workspace", icon: 'zap', x: e.clientX, y: e.clientY })}
                   onMouseMove={(e) => setTooltip(prev => ({ ...prev, x: e.clientX, y: e.clientY }))}
                   onMouseLeave={() => setTooltip(prev => ({ ...prev, show: false }))}
@@ -244,7 +244,7 @@ export function HeroVisual({ isExiting = false }: { isExiting?: boolean }) {
                 <div 
                   ref={zapSmallRef} 
                   className="block lg:hidden mx-[0.02em] relative cursor-pointer group"
-                  onClick={() => window.open('https://arfazrllworkspace.vercel.app/', '_blank')}
+                  onClick={() => window.open('https://aamodworkspace.vercel.app/', '_blank')}
                   onMouseEnter={(e) => setTooltip({ show: true, text: "Go to Workspace", icon: 'zap', x: e.clientX, y: e.clientY })}
                   onMouseMove={(e) => setTooltip(prev => ({ ...prev, x: e.clientX, y: e.clientY }))}
                   onMouseLeave={() => setTooltip(prev => ({ ...prev, show: false }))}

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { ArrowUp } from "lucide-react";
@@ -11,7 +11,7 @@ export default function CreditsFooter() {
     const credits = [
         {
             role: "Directed By",
-            name: "Arfazrll"
+            name: "Aamod007"
         },
         {
             role: "Visual Engineering",

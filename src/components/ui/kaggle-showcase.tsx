@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { cn } from "@/lib/utils";
 import React, { useState, useEffect, useRef } from "react";
@@ -37,7 +37,7 @@ import { motion, AnimatePresence, useInView, animate } from 'framer-motion';
 import { useLenis } from 'lenis/react';
 import { useIsInStack } from './showcase-stack';
 
-const KAGGLE_USER = "Arfazrll";
+const KAGGLE_USER = "Aamod007";
 
 // --- Achievements (Circular Tokens) ---
 const BADGE_LIST = [

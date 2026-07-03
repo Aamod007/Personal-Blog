@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from 'next';
+﻿import type { Metadata, Viewport } from 'next';
 import { Inter, JetBrains_Mono, Playfair_Display, Alex_Brush } from 'next/font/google';
 import { getMessages, getLocale } from 'next-intl/server';
 import { ThemeProvider, I18nProvider, SmoothScrollProvider } from '@/providers';
@@ -32,7 +32,7 @@ const signature = Alex_Brush({
 
 export const metadata: Metadata = {
     title: {
-        default: 'Arfazrll | AI & Software Engineer',
+        default: 'Aamod007 | AI & Software Engineer',
         template: '%s | Portfolio',
     },
     description: 'A passionate developer building digital experiences that inspire. Explore my projects, skills, and professional journey.',
@@ -44,13 +44,13 @@ export const metadata: Metadata = {
         type: 'website',
         locale: 'en_US',
         url: 'https://your-domain.com',
-        title: 'Arfazrll | AI & Software Engineer',
+        title: 'Aamod007 | AI & Software Engineer',
         description: 'A passionate developer building digital experiences that inspire.',
         siteName: 'Portfolio',
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Arfazrll | AI & Software Engineer',
+        title: 'Aamod007 | AI & Software Engineer',
         description: 'A passionate developer building digital experiences that inspire.',
         creator: '@yourusername',
     },
@@ -67,8 +67,8 @@ export const metadata: Metadata = {
     },
     icons: {
         icon: [
-            { url: '/Arfazrll_light.svg', media: '(prefers-color-scheme: light)' },
-            { url: '/Arfazrll_dark.svg', media: '(prefers-color-scheme: dark)' },
+            { url: '/Aamod007_light.svg', media: '(prefers-color-scheme: light)' },
+            { url: '/Aamod007_dark.svg', media: '(prefers-color-scheme: dark)' },
         ],
     },
 };
