@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Separator } from "@/components/ui/separator";
 import { Github, Linkedin, Instagram, ArrowDown, ArrowDownRight, Bot, Zap, ExternalLink, MessageSquare } from 'lucide-react';
@@ -353,7 +353,7 @@ export function HeroVisual({ isExiting = false }: { isExiting?: boolean }) {
                 <ProfileCard
                   name={personal.name}
                   title="AI Engineer & Software Engineer"
-                  description={`${personal.name} is a dedicated AI & Software Engineer focused on building scalable, intelligent systems and robust software architectures. He specializes in bridging technical innovation with high-performance execution to deliver meaningful and impactful digital solutions.`}
+                  description={`${personal.name} is a dedicated AI & Data Engineer focused on building cloud infrastructures, distributed systems, and scalable backend architecture. He specializes in delivering intelligent, reliable solutions built for real-world impact.`}
                   imageUrl={personal.avatar}
                   githubUrl={personal.socialLinks.find(s => s.platform === 'GitHub')?.url}
                   linkedinUrl={personal.socialLinks.find(s => s.platform === 'LinkedIn')?.url}
