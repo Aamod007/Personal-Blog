@@ -4,38 +4,37 @@ export async function GET() {
   const username = process.env.KAGGLE_USERNAME || "aamod06";
   const apiToken = process.env.KAGGLE_API_TOKEN;
 
-  let datasets: any[] = [];
-  let models: any[] = [];
+  if (!apiToken) {
+    return NextResponse.json({ error: "Kaggle API token not found" }, { status: 500 });
+  }
 
   try {
-    if (apiToken) {
-      const auth = Buffer.from(`${username}:${apiToken}`).toString('base64');
-      const headers = { 'Authorization': `Basic ${auth}` };
+    const auth = Buffer.from(`${username}:${apiToken}`).toString('base64');
+    const headers = { 'Authorization': `Basic ${auth}` };
 
     // 1. Fetch Datasets
     const datasetsRes = await fetch(`https://www.kaggle.com/api/v1/datasets/list?user=${username}`, { headers });
-      const datasetsRaw = await datasetsRes.json();
-      datasets = Array.isArray(datasetsRaw) ? datasetsRaw.map(d => ({
-          title: d.title || "Untitled Dataset",
-          votes: d.voteCount || 0,
-          views: d.viewCount || 0,
-          updated: d.lastUpdated || new Date().toISOString(),
-          url: d.url,
-          category: "Dataset",
-          usability: d.usabilityRating || 0,
-          size: d.totalBytes ? (d.totalBytes / 1024 / 1024).toFixed(1) + " MB" : "N/A"
-      })) : [];
+    const datasetsRaw = await datasetsRes.json();
+    const datasets = Array.isArray(datasetsRaw) ? datasetsRaw.map(d => ({
+        title: d.title || "Untitled Dataset",
+        votes: d.voteCount || 0,
+        views: d.viewCount || 0,
+        updated: d.lastUpdated || new Date().toISOString(),
+        url: d.url,
+        category: "Dataset",
+        usability: d.usabilityRating || 0,
+        size: d.totalBytes ? (d.totalBytes / 1024 / 1024).toFixed(1) + " MB" : "N/A"
+    })) : [];
 
     // 2. Fetch Models
     const modelsRes = await fetch(`https://www.kaggle.com/api/v1/models/list?owner=${username}`, { headers });
-      const modelsData = await modelsRes.json();
-      models = (modelsData.models || []).map((m: any) => ({
-          title: m.title || "Untitled Model",
-          category: "Model",
-          updated: m.lastUpdated || new Date().toISOString(),
-          votes: 0
-      }));
-    }
+    const modelsData = await modelsRes.json();
+    const models = (modelsData.models || []).map((m: any) => ({
+        title: m.title || "Untitled Model",
+        category: "Model",
+        updated: m.lastUpdated || new Date().toISOString(),
+        votes: 0
+    }));
 
     // 3. User Provided Notebooks & Overview Items (Merged for high fidelity)
     const notebooks = [

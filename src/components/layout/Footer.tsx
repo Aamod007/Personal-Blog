@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useState, useCallback, useEffect, Fragment } from 'react';
 import { createPortal } from 'react-dom';
@@ -408,7 +408,7 @@ export function Footer() {
                                         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                                         className="text-[18vw] font-black leading-none text-zinc-900 dark:text-white tracking-tighter select-none text-center"
                                     >
-                                        ARFAZRLL
+                                        AAMOD
                                     </motion.h2>
                                 </div>
                             </div>
