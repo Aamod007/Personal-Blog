@@ -7,8 +7,8 @@ import { usePerformance } from '@/hooks/usePerformance';
 
 export default function ResumePage() {
     const { isLowPowerMode } = usePerformance();
-    // File ID: 1mfYs2MOHpwEFLe-Ld4OCcgS1Lbo6wW7O
-    const fileId = "1mfYs2MOHpwEFLe-Ld4OCcgS1Lbo6wW7O";
+    // File ID: 12U0-99qe5gFImn6R5w40F-HRV8S_rKb1
+    const fileId = "12U0-99qe5gFImn6R5w40F-HRV8S_rKb1";
     const resumeUrl = `https://drive.google.com/file/d/${fileId}/view?usp=sharing`;
 
     // Standard preview URL with sharing context

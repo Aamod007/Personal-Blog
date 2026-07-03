@@ -24,7 +24,7 @@ interface InnovativeExperienceHeroProps {
 
 const NODES_DATA: Record<string, NodeData[]> = {
     education: [
-        { label: 'Telkom University', description: 'Bachelor of Technology - Information Technology (GPA 3.8/4.0).', orbitIndex: 0, position: 0.1, imageUrl: "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=400&auto=format&fit=crop" },
+        { label: 'Telkom University', description: 'Bachelor of Technology - Information Technology (CGPA 7.3/10).', orbitIndex: 0, position: 0.1, imageUrl: "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=400&auto=format&fit=crop" },
         { label: 'SMAN 88 Jakarta', description: 'High School Diploma - Science (IPA) Major.', orbitIndex: 1, position: 0.25, imageUrl: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=400&auto=format&fit=crop" },
         { label: 'Coding Camp DBS', description: 'Scholarship Awardee – Intensive AI Engineer training.', orbitIndex: 0, position: 0.45, imageUrl: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=400&auto=format&fit=crop" },
         { label: 'IDCamp IOH', description: 'Machine Learning Engineer Program (Industry Standard).', orbitIndex: 1, position: 0.65, imageUrl: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=400&auto=format&fit=crop" },

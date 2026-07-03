@@ -13,7 +13,7 @@ const calculateMetrics = () => {
     const totalTools = portfolioData.tools?.length || 0;
 
     // Calculate years of experience (assuming earliest project start date)
-    const yearsExp = 2; // Hardcoded based on resume/experience
+    const yearsExp = 6; // Hardcoded based on resume/experience
 
     return {
         projects: totalProjects,
@@ -106,7 +106,7 @@ export function ProjectStats({ isLowPowerMode }: { isLowPowerMode?: boolean }) {
         },
         {
             value: `${metrics.yearsExp}+`,
-            label: 'Years Experience',
+            label: 'Months Experience',
             icon: <TrendingUp className="w-6 h-6 text-emerald-500" />,
             gradient: 'rgba(16, 185, 129, 0.3), rgba(6, 182, 212, 0.3), rgba(16, 185, 129, 0.3)'
         },

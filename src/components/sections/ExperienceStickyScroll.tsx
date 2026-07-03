@@ -37,7 +37,7 @@ export default function ExperienceStickyScroll({ isLowPowerMode = false }: { isL
                         </div>
 
                         <div className="flex flex-wrap gap-2 justify-center mb-4">
-                            {["GPA 3.8", "AI Researcher", "IT Major"].map(s => (
+                            {["CGPA 7.3", "AI Researcher", "IT Major"].map(s => (
                                 <span key={s} className="px-3 py-1 rounded-full text-[10px] bg-white/10 text-white border border-white/20 font-mono font-bold backdrop-blur-md shadow-lg">
                                     {s}
                                 </span>

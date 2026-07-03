@@ -37,16 +37,16 @@ interface CertificateHeroScrollProps {
 }
 
 const CERTIFICATE_POOL = [
-    "Data Analytics on Google Cloud.png",
-    "Deep Learning Beginner.jpg",
-    "Docker, Kubernetes dan DevOps.jpg",
-    "Fullstack Programming Untuk Pemula.jpg",
-    "Introduction to Generative AI.png",
-    "Machine Learning Foundations.png",
-    "Mastering Smart Contract.jpg",
-    "Started with Databases.png",
-    "Supervised Machine Learning Regression and Classification.jpeg",
-    "elevAIte with Dicoding Program 2025.png"
+    "ECWoC-2026-ID-Aamod-Kumar.png",
+    "ECWoC-Contributor-ID-Template.png",
+    "google-cloud-computing-foundations-certificate.png",
+    "OCI25AICFA.jpeg",
+    "oscg-mentor-aamod-kumar.png",
+    "ssoc-s5-contributor-Aamod007.png",
+    "ssoc-s5-mentor-Aamod007.png",
+    "swoc ticket.jpg",
+    "SWOC26-MENT-Aamod_Kumar.png",
+    "WhatsApp Image 2025-09-29 at 11.07.40 PM.jpeg"
 ];
 
 const CertificateHeroScroll: FC<CertificateHeroScrollProps> = ({ onDownloadClick, isLowPowerMode: isLowPowerModeProp }) => {

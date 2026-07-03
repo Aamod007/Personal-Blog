@@ -73,7 +73,7 @@ function EducationContent() {
                     </h2>
 
                     <p className="text-muted-foreground leading-relaxed max-w-md">
-                        {education.major} major with a GPA of {education.gpa}. Focused on AI Engineering and Systems Research. Active in multiple high-impact research laboratories and national competitions.
+                        {education.major} major with a CGPA of {education.gpa}. Focused on AI Engineering and Systems Research. Active in multiple high-impact research laboratories and national competitions.
                     </p>
                 </div>
 
@@ -94,7 +94,7 @@ function EducationContent() {
 
                         <div className="flex flex-wrap justify-center gap-2">
                             <span className="px-3 py-1.5 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20">
-                                GPA {education.gpa}
+                                CGPA {education.gpa}
                             </span>
                             <span className="px-3 py-1.5 rounded-full text-xs font-medium bg-secondary/50 text-foreground border border-secondary/30">
                                 AI Researcher

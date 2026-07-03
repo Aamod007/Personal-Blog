@@ -7,16 +7,16 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 const certificates = [
-  "/certificate/Data Analytics on Google Cloud.png",
-  "/certificate/Deep Learning Beginner.jpg",
-  "/certificate/Docker, Kubernetes dan DevOps.jpg",
-  "/certificate/Fullstack Programming Untuk Pemula.jpg",
-  "/certificate/Introduction to Generative AI.png",
-  "/certificate/Machine Learning Foundations.png",
-  "/certificate/Mastering Smart Contract.jpg",
-  "/certificate/Started with Databases.png",
-  "/certificate/Supervised Machine Learning Regression and Classification.jpeg",
-  "/certificate/elevAIte with Dicoding Program 2025.png",
+  "/certificate/ECWoC-2026-ID-Aamod-Kumar.png",
+  "/certificate/ECWoC-Contributor-ID-Template.png",
+  "/certificate/google-cloud-computing-foundations-certificate.png",
+  "/certificate/OCI25AICFA.jpeg",
+  "/certificate/oscg-mentor-aamod-kumar.png",
+  "/certificate/ssoc-s5-contributor-Aamod007.png",
+  "/certificate/ssoc-s5-mentor-Aamod007.png",
+  "/certificate/swoc ticket.jpg",
+  "/certificate/SWOC26-MENT-Aamod_Kumar.png",
+  "/certificate/WhatsApp Image 2025-09-29 at 11.07.40 PM.jpeg"
 ];
 
 function ScrambleButton({ href }: { href: string }) {
