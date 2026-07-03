@@ -50,7 +50,7 @@ export const portfolioData: PortfolioData = {
             },
             {
                 platform: 'Spotify',
-                url: 'https://open.spotify.com/user/aamod',
+                url: 'https://open.spotify.com/user/313wnuolxpwgbypxzk3fme6ycvxa',
                 icon: 'spotify',
                 username: 'Azrll',
             },
