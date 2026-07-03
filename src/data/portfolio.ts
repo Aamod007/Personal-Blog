@@ -38,15 +38,15 @@ export const portfolioData: PortfolioData = {
             },
             {
                 platform: 'Twitter',
-                url: 'https://twitter.com/aamod',
+                url: 'https://x.com/Aamoddev23',
                 icon: 'twitter',
-                username: 'Aamod007',
+                username: 'Aamoddev23',
             },
             {
                 platform: 'Discord',
-                url: 'https://discord.com/users/aamod',
+                url: 'https://discord.com/users/aamoddev23',
                 icon: 'discord',
-                username: 'Aamod007',
+                username: 'aamoddev23',
             },
             {
                 platform: 'Spotify',
