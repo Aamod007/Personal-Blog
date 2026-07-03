@@ -37,16 +37,23 @@ interface CertificateHeroScrollProps {
 }
 
 const CERTIFICATE_POOL = [
-    "ECWoC-2026-ID-Aamod-Kumar.png",
-    "ECWoC-Contributor-ID-Template.png",
-    "google-cloud-computing-foundations-certificate.png",
-    "OCI25AICFA.jpeg",
-    "oscg-mentor-aamod-kumar.png",
-    "ssoc-s5-contributor-Aamod007.png",
-    "ssoc-s5-mentor-Aamod007.png",
-    "swoc ticket.jpg",
-    "SWOC26-MENT-Aamod_Kumar.png",
-    "WhatsApp Image 2025-09-29 at 11.07.40 PM.jpeg"
+    "/certificate/ADK.png",
+    "/certificate/App dev.png",
+    "/certificate/DataMLAI.png",
+    "/certificate/ECWoC-2026-ID-Aamod-Kumar.png",
+    "/certificate/ECWoC-Contributor-ID-Template.png",
+    "/certificate/Google Cloud Network.png",
+    "/certificate/google-cloud-computing-foundations-certificate.png",
+    "/certificate/Infra Google Cloud.png",
+    "/certificate/ML Google Cloud.png",
+    "/certificate/NetworkingSecurity.png",
+    "/certificate/OCI25AICFA.jpeg",
+    "/certificate/oscg-mentor-aamod-kumar.png",
+    "/certificate/ssoc-s5-contributor-Aamod007.png",
+    "/certificate/ssoc-s5-mentor-Aamod007.png",
+    "/certificate/swoc ticket.jpg",
+    "/certificate/SWOC26-MENT-Aamod_Kumar.png",
+    "/certificate/WhatsApp Image 2025-09-29 at 11.07.40 PM.jpeg"
 ];
 
 const CertificateHeroScroll: FC<CertificateHeroScrollProps> = ({ onDownloadClick, isLowPowerMode: isLowPowerModeProp }) => {

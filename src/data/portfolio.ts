@@ -2316,6 +2316,14 @@ WAKATIME_API_KEY=your_wakatime_key`
         },
         {
             id: 'cert-2',
+            title: 'ADK',
+            issuer: 'ADK',
+            date: '2025-01-01',
+            category: 'certification',
+            image: '/certificate/ADK.png',
+        },
+        {
+            id: 'cert-3',
             title: 'Adobe',
             issuer: 'Adobe',
             date: '2025-01-01',
@@ -2323,7 +2331,15 @@ WAKATIME_API_KEY=your_wakatime_key`
             image: '/certificate/Adobe.pdf',
         },
         {
-            id: 'cert-3',
+            id: 'cert-4',
+            title: 'App dev',
+            issuer: 'Certification Provider',
+            date: '2025-01-01',
+            category: 'certification',
+            image: '/certificate/App dev.png',
+        },
+        {
+            id: 'cert-5',
             title: 'Cyber Vol',
             issuer: 'Certification Provider',
             date: '2025-01-01',
@@ -2331,7 +2347,15 @@ WAKATIME_API_KEY=your_wakatime_key`
             image: '/certificate/Cyber_Vol.pdf',
         },
         {
-            id: 'cert-4',
+            id: 'cert-6',
+            title: 'DataMLAI',
+            issuer: 'Certification Provider',
+            date: '2025-01-01',
+            category: 'certification',
+            image: '/certificate/DataMLAI.png',
+        },
+        {
+            id: 'cert-7',
             title: 'ECWoC 2026 ID Aamod Kumar',
             issuer: 'ECWoC',
             date: '2025-01-01',
@@ -2339,7 +2363,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             image: '/certificate/ECWoC-2026-ID-Aamod-Kumar.png',
         },
         {
-            id: 'cert-5',
+            id: 'cert-8',
             title: 'ECWoC Contributor ID Template',
             issuer: 'ECWoC',
             date: '2025-01-01',
@@ -2347,7 +2371,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             image: '/certificate/ECWoC-Contributor-ID-Template.png',
         },
         {
-            id: 'cert-6',
+            id: 'cert-9',
             title: 'ECWOC',
             issuer: 'ECWoC',
             date: '2025-01-01',
@@ -2355,7 +2379,15 @@ WAKATIME_API_KEY=your_wakatime_key`
             image: '/certificate/ECWOC.pdf',
         },
         {
-            id: 'cert-7',
+            id: 'cert-10',
+            title: 'Google Cloud Network',
+            issuer: 'Google Cloud',
+            date: '2025-01-01',
+            category: 'certification',
+            image: '/certificate/Google Cloud Network.png',
+        },
+        {
+            id: 'cert-11',
             title: 'google cloud computing foundations certificate',
             issuer: 'Google Cloud',
             date: '2025-01-01',
@@ -2363,7 +2395,31 @@ WAKATIME_API_KEY=your_wakatime_key`
             image: '/certificate/google-cloud-computing-foundations-certificate.png',
         },
         {
-            id: 'cert-8',
+            id: 'cert-12',
+            title: 'Infra Google Cloud',
+            issuer: 'Google Cloud',
+            date: '2025-01-01',
+            category: 'certification',
+            image: '/certificate/Infra Google Cloud.png',
+        },
+        {
+            id: 'cert-13',
+            title: 'ML Google Cloud',
+            issuer: 'Google Cloud',
+            date: '2025-01-01',
+            category: 'certification',
+            image: '/certificate/ML Google Cloud.png',
+        },
+        {
+            id: 'cert-14',
+            title: 'NetworkingSecurity',
+            issuer: 'Certification Provider',
+            date: '2025-01-01',
+            category: 'certification',
+            image: '/certificate/NetworkingSecurity.png',
+        },
+        {
+            id: 'cert-15',
             title: 'OCI25AICFA',
             issuer: 'Certification Provider',
             date: '2025-01-01',
@@ -2371,7 +2427,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             image: '/certificate/OCI25AICFA.jpeg',
         },
         {
-            id: 'cert-9',
+            id: 'cert-16',
             title: 'oscg mentor aamod kumar',
             issuer: 'OSCG',
             date: '2025-01-01',
@@ -2379,7 +2435,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             image: '/certificate/oscg-mentor-aamod-kumar.png',
         },
         {
-            id: 'cert-10',
+            id: 'cert-17',
             title: 'OSCG',
             issuer: 'OSCG',
             date: '2025-01-01',
@@ -2387,7 +2443,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             image: '/certificate/OSCG.pdf',
         },
         {
-            id: 'cert-11',
+            id: 'cert-18',
             title: 'ssoc s5 contributor Aamod007',
             issuer: 'SSOC',
             date: '2025-01-01',
@@ -2395,7 +2451,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             image: '/certificate/ssoc-s5-contributor-Aamod007.png',
         },
         {
-            id: 'cert-12',
+            id: 'cert-19',
             title: 'ssoc s5 mentor Aamod007',
             issuer: 'SSOC',
             date: '2025-01-01',
@@ -2403,7 +2459,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             image: '/certificate/ssoc-s5-mentor-Aamod007.png',
         },
         {
-            id: 'cert-13',
+            id: 'cert-20',
             title: 'swoc ticket',
             issuer: 'SWOC',
             date: '2025-01-01',
@@ -2411,7 +2467,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             image: '/certificate/swoc ticket.jpg',
         },
         {
-            id: 'cert-14',
+            id: 'cert-21',
             title: 'SWOC26 MENT Aamod Kumar',
             issuer: 'SWOC',
             date: '2025-01-01',
@@ -2419,7 +2475,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             image: '/certificate/SWOC26-MENT-Aamod_Kumar.png',
         },
         {
-            id: 'cert-15',
+            id: 'cert-22',
             title: 'Web e stan',
             issuer: 'Certification Provider',
             date: '2025-01-01',
@@ -2427,7 +2483,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             image: '/certificate/Web-e-stan.pdf',
         },
         {
-            id: 'cert-16',
+            id: 'cert-23',
             title: 'WhatsApp Image 2025 09 29 at 11.07.40 PM',
             issuer: 'Certification Provider',
             date: '2025-01-01',

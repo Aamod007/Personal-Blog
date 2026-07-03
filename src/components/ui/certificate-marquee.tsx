@@ -7,9 +7,16 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 const certificates = [
+  "/certificate/ADK.png",
+  "/certificate/App dev.png",
+  "/certificate/DataMLAI.png",
   "/certificate/ECWoC-2026-ID-Aamod-Kumar.png",
   "/certificate/ECWoC-Contributor-ID-Template.png",
+  "/certificate/Google Cloud Network.png",
   "/certificate/google-cloud-computing-foundations-certificate.png",
+  "/certificate/Infra Google Cloud.png",
+  "/certificate/ML Google Cloud.png",
+  "/certificate/NetworkingSecurity.png",
   "/certificate/OCI25AICFA.jpeg",
   "/certificate/oscg-mentor-aamod-kumar.png",
   "/certificate/ssoc-s5-contributor-Aamod007.png",
