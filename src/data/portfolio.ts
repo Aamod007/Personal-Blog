@@ -6,7 +6,7 @@ export const portfolioData: PortfolioData = {
         title: 'AI Engineer',
         subtitle: 'AI & Data Engineer | Cloud, Distributed Systems & Backend Architecture',
         bio: 'A Computer Science student majoring in Artificial Intelligence and Data Engineering with a distinctive profile that fuses deep technical expertise with proven strategic leadership. My work comprises building cloud infrastructures, distributed systems, and scalable backend architecture to deliver intelligent, reliable solutions built for real-world impact. Currently exploring AI Agents and Blockchain/Web3 technologies. Driven to leverage this integrated skill set to architect systems that bridge technical innovation with effective execution.',
-        avatar: '/about/aamod.jpeg',
+        avatar: '/about/ak.jpeg',
         location: 'Uttar Pradesh, India',
         email: 'aamoddev23@gmail.com',
         phone: '',
@@ -1730,7 +1730,7 @@ export const portfolioData: PortfolioData = {
             date: '2026-03-20',
             category: 'applied-ai',
             tags: ['AI', 'Agents', 'Enterprise'],
-            author: { name: 'Aamod', avatar: '/about/aamod.jpeg' },
+            author: { name: 'Aamod', avatar: '/about/ak.jpeg' },
             readTime: '5'
         },
         {
@@ -1743,7 +1743,7 @@ export const portfolioData: PortfolioData = {
             date: '2026-03-15',
             category: 'more',
             tags: ['Web3', 'Blockchain', 'UX'],
-            author: { name: 'Aamod', avatar: '/about/aamod.jpeg' },
+            author: { name: 'Aamod', avatar: '/about/ak.jpeg' },
             readTime: '4'
         },
         {
@@ -1756,7 +1756,7 @@ export const portfolioData: PortfolioData = {
             date: '2026-03-05',
             category: 'software-development',
             tags: ['Next.js', 'React', 'Performance'],
-            author: { name: 'Aamod', avatar: '/about/aamod.jpeg' },
+            author: { name: 'Aamod', avatar: '/about/ak.jpeg' },
             readTime: '6'
         },
         {
@@ -1769,7 +1769,7 @@ export const portfolioData: PortfolioData = {
             date: '2026-02-28',
             category: 'applied-ai',
             tags: ['AI', 'Security', 'Deep Learning'],
-            author: { name: 'Aamod', avatar: '/about/aamod.jpeg' },
+            author: { name: 'Aamod', avatar: '/about/ak.jpeg' },
             readTime: '7'
         },
         {
@@ -1782,7 +1782,7 @@ export const portfolioData: PortfolioData = {
             date: '2026-02-15',
             category: 'applied-ai',
             tags: ['LLM', 'Python', 'Ollama'],
-            author: { name: 'Aamod', avatar: '/about/aamod.jpeg' },
+            author: { name: 'Aamod', avatar: '/about/ak.jpeg' },
             readTime: '8'
         },
         {
@@ -1795,7 +1795,7 @@ export const portfolioData: PortfolioData = {
             date: '2026-02-01',
             category: 'more',
             tags: ['Solidity', 'Ethereum', 'Security'],
-            author: { name: 'Aamod', avatar: '/about/aamod.jpeg' },
+            author: { name: 'Aamod', avatar: '/about/ak.jpeg' },
             readTime: '5'
         },
         {
@@ -1808,7 +1808,7 @@ export const portfolioData: PortfolioData = {
             date: '2026-01-25',
             category: 'software-development',
             tags: ['React', 'Zustand', 'Architecture'],
-            author: { name: 'Aamod', avatar: '/about/aamod.jpeg' },
+            author: { name: 'Aamod', avatar: '/about/ak.jpeg' },
             readTime: '4'
         },
         {
@@ -1821,7 +1821,7 @@ export const portfolioData: PortfolioData = {
             date: '2026-01-10',
             category: 'software-development',
             tags: ['IoT', 'ESP32', 'Edge'],
-            author: { name: 'Aamod', avatar: '/about/aamod.jpeg' },
+            author: { name: 'Aamod', avatar: '/about/ak.jpeg' },
             readTime: '6'
         },
         {
@@ -1834,7 +1834,7 @@ export const portfolioData: PortfolioData = {
             date: '2026-01-05',
             category: 'applied-ai',
             tags: ['Healthcare', 'AI', 'Ethics'],
-            author: { name: 'Aamod', avatar: '/about/aamod.jpeg' },
+            author: { name: 'Aamod', avatar: '/about/ak.jpeg' },
             readTime: '7'
         },
         {
@@ -1847,7 +1847,7 @@ export const portfolioData: PortfolioData = {
             date: '2026-03-31',
             category: 'about-me',
             tags: ['Philosophy', 'Engineering', 'About Me'],
-            author: { name: 'Aamod', avatar: '/about/aamod.jpeg' },
+            author: { name: 'Aamod', avatar: '/about/ak.jpeg' },
             readTime: '5'
         }
     ],
