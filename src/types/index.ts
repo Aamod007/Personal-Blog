@@ -70,7 +70,7 @@ export interface Achievement {
     credentialId?: string;
     tags?: string[];
     type?: string;
-    category: 'certification' | 'award' | 'recognition' | 'publication';
+    category: 'certification' | 'award' | 'competition' | 'recognition' | 'publication';
 }
 
 export interface Skill {
