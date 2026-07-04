@@ -51,9 +51,7 @@ const CERTIFICATE_POOL = [
     "oscg-mentor-aamod-kumar.png",
     "ssoc-s5-contributor-Aamod007.png",
     "ssoc-s5-mentor-Aamod007.png",
-    "swoc ticket.jpg",
-    "SWOC26-MENT-Aamod_Kumar.png",
-    "WhatsApp Image 2025-09-29 at 11.07.40 PM.jpeg"
+    "SWOC26-MENT-Aamod_Kumar.png"
 ];
 
 const CertificateHeroScroll: FC<CertificateHeroScrollProps> = ({ onDownloadClick, isLowPowerMode: isLowPowerModeProp }) => {

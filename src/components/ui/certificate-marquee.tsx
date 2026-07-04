@@ -21,9 +21,7 @@ const certificates = [
   "/certificate/oscg-mentor-aamod-kumar.png",
   "/certificate/ssoc-s5-contributor-Aamod007.png",
   "/certificate/ssoc-s5-mentor-Aamod007.png",
-  "/certificate/swoc ticket.jpg",
   "/certificate/SWOC26-MENT-Aamod_Kumar.png",
-  "/certificate/WhatsApp Image 2025-09-29 at 11.07.40 PM.jpeg"
 ];
 
 function ScrambleButton({ href }: { href: string }) {
