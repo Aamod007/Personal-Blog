@@ -750,9 +750,9 @@ export const portfolioData: PortfolioData = {
             position: 'MLOps Intern',
             description: 'Working on machine learning operations, streamlining ML pipelines, and deploying scalable AI solutions.',
             responsibilities: [
-                \'Streamlining machine learning deployment pipelines\',
-                \'Deploying and monitoring ML models in production\',
-                \'Collaborating with cross-functional teams to integrate AI models\'
+                'Streamlining machine learning deployment pipelines',
+                'Deploying and monitoring ML models in production',
+                'Collaborating with cross-functional teams to integrate AI models'
             ],
             skills: ['MLOps', 'Machine Learning', 'Cloud Infrastructure', 'CI/CD', 'Python'],
             startDate: '2026-06-01',
@@ -769,9 +769,9 @@ export const portfolioData: PortfolioData = {
             position: 'Mentor',
             description: 'Mentoring contributors on AI/ML and backend engineering projects, providing guidance on system design, debugging, Git/GitHub workflows, and pull-request quality.',
             responsibilities: [
-                \'Fostering technical growth and collaborative development practices\',
-                \'Providing guidance on system design and debugging\',
-                \'Reviewing pull-request quality and Git/GitHub workflows\'
+                'Fostering technical growth and collaborative development practices',
+                'Providing guidance on system design and debugging',
+                'Reviewing pull-request quality and Git/GitHub workflows'
             ],
             skills: ['Mentorship', 'AI/ML', 'Backend Engineering', 'System Design'],
             startDate: '2026-04-01',
@@ -788,9 +788,9 @@ export const portfolioData: PortfolioData = {
             position: 'Mentor',
             description: 'Mentoring contributors on open-source projects, guiding issue resolution, feature development, and code reviews.',
             responsibilities: [
-                \'Guiding issue resolution and feature development\',
-                \'Reviewing code and best practices\',
-                \'Mentoring on AI/ML workflows and API integration\'
+                'Guiding issue resolution and feature development',
+                'Reviewing code and best practices',
+                'Mentoring on AI/ML workflows and API integration'
             ],
             skills: ['Mentorship', 'Open Source', 'Code Review'],
             startDate: '2026-05-01',
@@ -807,9 +807,9 @@ export const portfolioData: PortfolioData = {
             position: 'Contributor',
             description: 'Contributing to open-source projects through feature development, bug fixing, and collaborative coding.',
             responsibilities: [
-                \'Developing features and fixing bugs\',
-                \'Gaining hands-on experience with real-world development workflows\',
-                \'Collaborative coding and team-based software engineering\'
+                'Developing features and fixing bugs',
+                'Gaining hands-on experience with real-world development workflows',
+                'Collaborative coding and team-based software engineering'
             ],
             skills: ['Open Source', 'Git', 'Software Development'],
             startDate: '2026-05-01',
@@ -826,9 +826,9 @@ export const portfolioData: PortfolioData = {
             position: 'Mentor',
             description: 'Mentoring contributors on real-world open-source projects including et-si.ai, guiding issue resolution, feature development, code reviews, and best practices.',
             responsibilities: [
-                \'Mentoring contributors on et-si.ai and other projects\',
-                \'Guiding issue resolution and feature development\',
-                \'Code reviews and best practices in Python, AI/ML workflows, and API integration\'
+                'Mentoring contributors on et-si.ai and other projects',
+                'Guiding issue resolution and feature development',
+                'Code reviews and best practices in Python, AI/ML workflows, and API integration'
             ],
             skills: ['Mentorship', 'Python', 'AI/ML Workflows', 'API Integration'],
             startDate: '2026-01-01',
@@ -845,9 +845,9 @@ export const portfolioData: PortfolioData = {
             position: 'Mentor',
             description: 'Guiding new contributors in open-source development, helping with Git/GitHub workflows, project architecture, debugging, and pull-request quality.',
             responsibilities: [
-                \'Guiding new contributors in open-source development\',
-                \'Helping with project architecture, debugging, and pull-request quality\',
-                \'Supporting AI/ML and backend projects while promoting collaborative engineering practices\'
+                'Guiding new contributors in open-source development',
+                'Helping with project architecture, debugging, and pull-request quality',
+                'Supporting AI/ML and backend projects while promoting collaborative engineering practices'
             ],
             skills: ['Mentorship', 'Git/GitHub', 'Project Architecture', 'Collaborative Engineering'],
             startDate: '2026-01-01',
@@ -864,9 +864,9 @@ export const portfolioData: PortfolioData = {
             position: 'Contributor',
             description: 'Actively contributing to open-source projects, improving codebases, and collaborating with global developers.',
             responsibilities: [
-                \'Contributing to open-source projects and improving codebases\',
-                \'Collaborating with global developers\',
-                \'Reviewing pull requests and fixing complex issues\'
+                'Contributing to open-source projects and improving codebases',
+                'Collaborating with global developers',
+                'Reviewing pull requests and fixing complex issues'
             ],
             skills: ['Open Source', 'Git', 'Software Architecture', 'Collaboration'],
             startDate: '2026-01-01',
@@ -883,9 +883,9 @@ export const portfolioData: PortfolioData = {
             position: 'Campus Lead',
             description: 'Leading open-source awareness and contributor onboarding programs on campus while coordinating with the global OSCG network.',
             responsibilities: [
-                \'Leading open-source awareness and contributor onboarding programs\',
-                \'Coordinating with the global OSCG network to drive community growth\',
-                \'Organizing awareness activities and fostering a culture of learning\'
+                'Leading open-source awareness and contributor onboarding programs',
+                'Coordinating with the global OSCG network to drive community growth',
+                'Organizing awareness activities and fostering a culture of learning'
             ],
             skills: ['Leadership', 'Community Building', 'Open Source', 'Communication'],
             startDate: '2025-12-01',
@@ -902,9 +902,9 @@ export const portfolioData: PortfolioData = {
             position: 'Contributor',
             description: 'Contributing to software and AI projects through feature implementation, bug fixes, and documentation enhancements. Recognized among the Top 50 performers in ECWOC.',
             responsibilities: [
-                \'Contributing to software and AI projects through feature implementation\',
-                \'Collaborating with teams on backend development and performance optimization\',
-                \'Recognized among the Top 50 performers in ECWOC for technical impact\'
+                'Contributing to software and AI projects through feature implementation',
+                'Collaborating with teams on backend development and performance optimization',
+                'Recognized among the Top 50 performers in ECWOC for technical impact'
             ],
             skills: ['Backend Development', 'Performance Optimization', 'AI', 'Software Engineering'],
             startDate: '2026-01-01',
@@ -921,9 +921,9 @@ export const portfolioData: PortfolioData = {
             position: 'Student Ambassador',
             description: 'Promoted LetsUpgrade programs and initiatives on campus by building student engagement and encouraging participation in tech upskilling courses.',
             responsibilities: [
-                \'Promoted LetsUpgrade programs and initiatives on campus\',
-                \'Built student engagement and encouraged participation in tech upskilling courses\',
-                \'Acted as a bridge between the community and students\'
+                'Promoted LetsUpgrade programs and initiatives on campus',
+                'Built student engagement and encouraged participation in tech upskilling courses',
+                'Acted as a bridge between the community and students'
             ],
             skills: ['Leadership', 'Community Building', 'Communication', 'Marketing'],
             startDate: '2025-10-01',
@@ -940,9 +940,9 @@ export const portfolioData: PortfolioData = {
             position: 'Contributor',
             description: 'Contributed to open-source repositories by submitting meaningful pull requests, fixing bugs, and improving documentation.',
             responsibilities: [
-                \'Submitted meaningful pull requests and fixed bugs\',
-                \'Improved documentation for various repositories\',
-                \'Gained hands-on experience with Git/GitHub and open-source best practices\'
+                'Submitted meaningful pull requests and fixed bugs',
+                'Improved documentation for various repositories',
+                'Gained hands-on experience with Git/GitHub and open-source best practices'
             ],
             skills: ['Open Source', 'Git', 'GitHub', 'Documentation'],
             startDate: '2025-10-01',
@@ -959,9 +959,9 @@ export const portfolioData: PortfolioData = {
             position: 'Contributor',
             description: 'Actively contributed to multiple open-source repositories by resolving issues, adding new features, and enhancing project documentation.',
             responsibilities: [
-                \'Resolved issues and added new features to open-source repositories\',
-                \'Worked closely with mentors and developers to improve code quality\',
-                \'Strengthened collaboration, problem-solving, and version-control skills\'
+                'Resolved issues and added new features to open-source repositories',
+                'Worked closely with mentors and developers to improve code quality',
+                'Strengthened collaboration, problem-solving, and version-control skills'
             ],
             skills: ['Open Source', 'Git', 'Collaboration', 'Problem Solving'],
             startDate: '2025-09-01',
