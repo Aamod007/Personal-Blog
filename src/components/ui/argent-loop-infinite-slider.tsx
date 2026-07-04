@@ -27,7 +27,7 @@ const PROJECT_DATA: ProjectData[] = portfolioData.projects.map((p) => ({
 
 export function ArgentLoopInfiniteSlider() {
   const containerRef = React.useRef<HTMLDivElement>(null);
-  
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"]
@@ -36,8 +36,8 @@ export function ArgentLoopInfiniteSlider() {
   const smoothProgress = useSpring(scrollYProgress, { stiffness: 60, damping: 30, mass: 1 });
 
   const projectArea = 0.85;
-  const projectStep = projectArea / PROJECT_DATA.length; 
-  const transWindow = 0.05; 
+  const projectStep = projectArea / PROJECT_DATA.length;
+  const transWindow = 0.05;
 
   const scrollMap = [0];
   const yMap = ["0vh"];
@@ -47,13 +47,13 @@ export function ArgentLoopInfiniteSlider() {
     if (i === 0) return;
     const boundary = i * projectStep;
     scrollMap.push(boundary - transWindow / 2, boundary + transWindow / 2);
-    yMap.push(`-${(i-1)*100}vh`, `-${i*100}vh`);
-    internalYMap.push(`-${(i-1)*250}px`, `-${i*250}px`);
+    yMap.push(`-${(i - 1) * 100}vh`, `-${i * 100}vh`);
+    internalYMap.push(`-${(i - 1) * 250}px`, `-${i * 250}px`);
   });
 
   scrollMap.push(projectArea, 1);
-  yMap.push(`-${(PROJECT_DATA.length-1)*100}vh`, `-${(PROJECT_DATA.length-1)*100}vh`);
-  internalYMap.push(`-${(PROJECT_DATA.length-1)*250}px`, `-${(PROJECT_DATA.length-1)*250}px`);
+  yMap.push(`-${(PROJECT_DATA.length - 1) * 100}vh`, `-${(PROJECT_DATA.length - 1) * 100}vh`);
+  internalYMap.push(`-${(PROJECT_DATA.length - 1) * 250}px`, `-${(PROJECT_DATA.length - 1) * 250}px`);
 
   const currentY = useTransform(smoothProgress, scrollMap, yMap);
   const contentInternalY = useTransform(smoothProgress, scrollMap, internalYMap);
@@ -248,7 +248,7 @@ export function ArgentLoopInfiniteSlider() {
             will-change: width;
         }
       `}</style>
-      
+
       <div className="argent-slider-wrapper">
         <motion.div style={{ opacity: bgOpacity }}>
           <div className="mist-overlay" />
@@ -262,7 +262,7 @@ export function ArgentLoopInfiniteSlider() {
         </motion.div>
 
         <div className="absolute inset-0 z-[100] flex items-center justify-center pointer-events-none">
-          <motion.div 
+          <motion.div
             style={{ y: finalContainerY, willChange: "transform" }}
             className="flex flex-col items-center"
           >
@@ -297,9 +297,9 @@ export function ArgentLoopInfiniteSlider() {
                             <p className="lowercase opacity-80 font-medium leading-relaxed max-w-[35%] text-[10px]">
                               {data.description}
                             </p>
-                            <Link 
-                                href={`/projects/${data.slug}`} 
-                                className="pointer-events-auto font-medium text-[10px] opacity-60 hover:opacity-100 hover:text-black transition-all duration-300 text-right group/link"
+                            <Link
+                              href={`/projects/${data.slug}`}
+                              className="pointer-events-auto font-medium text-[10px] opacity-60 hover:opacity-100 hover:text-black transition-all duration-300 text-right group/link"
                             >
                               <span className="border-b border-black/10 group-hover/link:border-black pb-1">View More</span>
                             </Link>
@@ -313,17 +313,17 @@ export function ArgentLoopInfiniteSlider() {
             </motion.div>
 
             <div className="h-[200px] w-full flex items-center justify-center pt-10">
-              <motion.div 
-                style={{ 
+              <motion.div
+                style={{
                   opacity: buttonOpacity,
                   pointerEvents: useTransform(smoothProgress, (v) => v > projectArea ? "auto" : "none")
                 }}
               >
                 <div className="flex items-center gap-4 pointer-events-auto">
                   <MagneticEffect>
-                    <a 
-                      href="https://github.com/Aamod007" 
-                      target="_blank" 
+                    <a
+                      href="https://github.com/Aamod007"
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="custom-btn-github hover:scale-110 active:scale-95 transition-transform shadow-xl block"
                       title="GitHub Profile"
@@ -331,7 +331,7 @@ export function ArgentLoopInfiniteSlider() {
                       <Github className="w-6 h-6" />
                     </a>
                   </MagneticEffect>
-                  
+
                   <MagneticEffect>
                     <div className="group-projects flex items-center gap-2">
                       <Link href="/projects" className="custom-btn group-hover:scale-105 active:scale-95 group-hover:shadow-[0_0_30px_rgba(193,228,74,0.3)]">
@@ -348,23 +348,23 @@ export function ArgentLoopInfiniteSlider() {
           </motion.div>
         </div>
 
-        <motion.div 
+        <motion.div
           style={{ opacity: useTransform(smoothProgress, [0, 0.05, projectArea, projectArea + 0.05], [0, 1, 1, 0]) }}
           className="slide-overlay"
         >
-           <span className="text-foreground/40 font-mono text-[10px] tracking-[0.5em] uppercase">Page</span>
-           <div className="slide-line bg-foreground/10">
-              <motion.div 
-                className="slide-progress bg-foreground" 
-                style={{ width: useTransform(smoothProgress, [0, projectArea], ["0%", "100%"]) }} 
-              />
-           </div>
-           <motion.span className="text-foreground font-mono text-[11px] tabular-nums font-bold">
-              {useTransform(smoothProgress, (v) => {
-               const idx = Math.min(Math.floor(v / projectStep), PROJECT_DATA.length - 1);
-               return `${idx + 1} / ${PROJECT_DATA.length}`;
-             })}
-           </motion.span>
+          <span className="text-foreground/40 font-mono text-[10px] tracking-[0.5em] uppercase">Page</span>
+          <div className="slide-line bg-foreground/10">
+            <motion.div
+              className="slide-progress bg-foreground"
+              style={{ width: useTransform(smoothProgress, [0, projectArea], ["0%", "100%"]) }}
+            />
+          </div>
+          <motion.span className="text-foreground font-mono text-[11px] tabular-nums font-bold">
+            {useTransform(smoothProgress, (v) => {
+              const idx = Math.min(Math.floor(v / projectStep), PROJECT_DATA.length - 1);
+              return `${idx + 1} / ${PROJECT_DATA.length}`;
+            })}
+          </motion.span>
         </motion.div>
       </div>
     </div>
