@@ -25,7 +25,7 @@ extend({ MeshLineGeometry, MeshLineMaterial });
 // Preload assets for faster startup
 useGLTF.preload('/lanyard/card.glb');
 useTexture.preload('/lanyard/lanyard.png');
-useTexture.preload('/lanyard/desain-kartu.png');
+useTexture.preload('/lanyard/Aamod.png');
 
 interface LanyardProps {
     position?: [number, number, number];
@@ -170,10 +170,15 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false, isDark = false }:
 
     const { nodes, materials } = useGLTF('/lanyard/card.glb') as any;
     const texture = useTexture('/lanyard/lanyard.png');
-    const customCardTexture = useTexture('/lanyard/desain-kartu.png');
+    const customCardTexture = useTexture('/lanyard/Aamod.png');
 
     // The GLTF model requires flipY to be false for its UV mapping
     customCardTexture.flipY = false;
+    customCardTexture.wrapS = THREE.RepeatWrapping;
+    customCardTexture.wrapT = THREE.RepeatWrapping;
+    // Fine-tuned vertical mapping to fit the entire image (barcode to bottom text) perfectly
+    customCardTexture.repeat.set(2, 1.42);
+    customCardTexture.offset.set(-1, -0.048);
 
     // Use the custom card texture directly without color inversion,
     // so user photos don't look like negative films in light mode.
@@ -298,7 +303,8 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false, isDark = false }:
                     {...segmentProps}
                     type={dragged ? ('kinematicPosition' as RigidBodyProps['type']) : ('dynamic' as RigidBodyProps['type'])}
                 >
-                    <CuboidCollider args={[0.8, 1.125, 0.01]} />
+                    {/* Scale the width of the collider by 0.83 to match the image aspect ratio */}
+                    <CuboidCollider args={[0.8 * 0.83, 1.125, 0.01]} />
                     <group
                         scale={2.25}
                         position={[0, -1.2, -0.05]}
@@ -313,7 +319,8 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false, isDark = false }:
                             drag(new THREE.Vector3().copy(e.point).sub(vec.copy(card.current.translation())));
                         }}
                     >
-                        <mesh geometry={nodes.card.geometry}>
+                        {/* Scale the width of the card mesh by 0.83 to fix aspect ratio distortion */}
+                        <mesh geometry={nodes.card.geometry} scale={[0.83, 1, 1]}>
                             <meshBasicMaterial
                                 map={cardTexture}
                                 map-anisotropy={16}

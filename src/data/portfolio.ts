@@ -14,7 +14,7 @@ export const portfolioData: PortfolioData = {
         website: 'https://personal-blog-aamod.vercel.app',
         languages: [
             { name: 'Hindi', level: 'Native' },
-            { name: 'English', level: 'Professional Working' },
+            { name: 'English', level: 'Professional' },
         ],
         socialLinks: [
             {
