@@ -700,7 +700,7 @@ export default function ProjectsPage() {
         const baseProducts = portfolioData.projects.map((p, i) => ({
             title: p.title,
             link: p.repoUrl || p.demoUrl || '#',
-            thumbnail: techImages[i % techImages.length]
+            thumbnail: p.image || techImages[i % techImages.length]
         }));
         return [...baseProducts, ...baseProducts, ...baseProducts].slice(0, 8);
     }, []);
