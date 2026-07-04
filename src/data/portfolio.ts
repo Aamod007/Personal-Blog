@@ -2326,24 +2326,6 @@ WAKATIME_API_KEY=your_wakatime_key`
         },
     ],
     achievements: [
-        // ── Competitions ──
-        {
-            id: 'ach-1',
-            title: 'Top 15/90 - Data Mining ADIKARA 2024',
-            issuer: 'Telkom University',
-            date: '2024-10-01',
-            description: 'Achieved top 15 ranking in data mining competition, applying advanced ML models to complex datasets.',
-            category: 'competition',
-        },
-        {
-            id: 'ach-2',
-            title: '4th Place - Business Case Competition',
-            issuer: 'GENBI',
-            date: '2025-01-01',
-            description: 'Developed innovative solutions for real-world business problems.',
-            category: 'competition',
-        },
-
         // ── Certifications (newest → oldest) ──
 
         // --- 2026 ---
@@ -2725,27 +2707,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             tags: ['Oracle', 'Cloud', 'AI'],
             category: 'certification',
         },
-        {
-            id: 'badge-5',
-            title: 'GirlScript Summer of Code 2025 - Contributor',
-            issuer: 'GirlScript Summer of Code',
-            date: '2025-09-29',
-            image: "/certificate/Contributor's badge.jpg",
-            type: 'Contributor',
-            tags: ['Open Source', 'GSSoC'],
-            category: 'certification',
-        },
-        {
-            id: 'cert-31',
-            title: 'Generative AI',
-            issuer: 'Dicoding Indonesia',
-            date: '2025-05-01',
-            credentialId: '72ZD5LYYLZYW',
-            credentialUrl: 'https://www.dicoding.com/certificates/72ZD5LYYLZYW',
-            type: 'Course',
-            tags: ['AI', 'Generative AI'],
-            category: 'certification',
-        },
+
         {
             id: 'cert-32',
             title: 'GirlScript Summer of Code 2025 - Contributor',
@@ -2774,7 +2736,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             image: '/certificate/Adobe.pdf',
             type: 'Certificate',
             tags: ['Adobe', 'Design'],
-            category: 'certification',
+            category: 'award',
         },
     ],
     techStack: [
