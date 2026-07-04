@@ -4,7 +4,7 @@ export const portfolioData: PortfolioData = {
     personal: {
         name: 'Aamod Kumar',
         title: 'AI Engineer',
-        subtitle: 'AI & Data Engineer | Mentor @ GSSoC, SSOC, SWOC, OSCG | Cloud & Backend Architecture',
+        subtitle: 'AI & Data Engineer | Cloud, Distributed Systems & Backend Architecture',
         bio: 'A Computer Science student majoring in Artificial Intelligence and Data Engineering with a distinctive profile that fuses deep technical expertise with proven strategic leadership. My work comprises building cloud infrastructures, distributed systems, and scalable backend architecture to deliver intelligent, reliable solutions built for real-world impact. Currently exploring AI Agents and Blockchain/Web3 technologies. Driven to leverage this integrated skill set to architect systems that bridge technical innovation with effective execution.',
         avatar: '/about/ak.jpeg',
         location: 'Uttar Pradesh, India',
@@ -779,7 +779,7 @@ export const portfolioData: PortfolioData = {
             isOngoing: false,
             location: 'Remote',
             type: 'volunteer',
-            logo: '/assets/github-logo.png',
+            logo: '/about/ak.jpeg',
             externalLink: '#',
         },
         {
@@ -798,7 +798,7 @@ export const portfolioData: PortfolioData = {
             isOngoing: false,
             location: 'Remote',
             type: 'volunteer',
-            logo: '/assets/github-logo.png',
+            logo: '/about/ak.jpeg',
             externalLink: '#',
         },
         {
@@ -817,7 +817,7 @@ export const portfolioData: PortfolioData = {
             isOngoing: false,
             location: 'Remote',
             type: 'volunteer',
-            logo: '/assets/github-logo.png',
+            logo: '/about/ak.jpeg',
             externalLink: '#',
         },
         {
@@ -836,7 +836,7 @@ export const portfolioData: PortfolioData = {
             isOngoing: false,
             location: 'Remote',
             type: 'volunteer',
-            logo: '/assets/github-logo.png',
+            logo: '/about/ak.jpeg',
             externalLink: '#',
         },
         {
@@ -950,7 +950,7 @@ export const portfolioData: PortfolioData = {
             isOngoing: false,
             location: 'Remote',
             type: 'volunteer',
-            logo: '/assets/github-logo.png',
+            logo: '/about/ak.jpeg',
             externalLink: '#',
         },
         {
@@ -969,7 +969,7 @@ export const portfolioData: PortfolioData = {
             isOngoing: true,
             location: 'India',
             type: 'internship',
-            logo: '/assets/futurence.png',
+            logo: '/about/ak.jpeg',
             externalLink: '#',
         }
     ],
