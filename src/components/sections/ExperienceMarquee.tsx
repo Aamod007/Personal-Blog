@@ -163,8 +163,8 @@ export default function ExperienceMarquee() {
     const { isLowPowerMode } = usePerformance();
     const experiences = portfolioData.experiences;
 
-    const topIds = ["prof-1", "prof-3", "prof-4", "prof-5", "prof-6", "lead-5"];
-    const bottomIds = ["lead-2", "lead-4", "cert-1", "cert-3", "cert-5", "vol-1"];
+    const topIds = ["prof-1", "prof-2", "prof-3", "prof-4", "prof-5", "prof-6"];
+    const bottomIds = ["prof-7", "prof-8", "prof-9", "prof-10", "prof-11", "prof-12"];
 
     const row1 = experiences.filter((exp: Experience) =>
         topIds.includes(exp.id)
@@ -174,6 +174,7 @@ export default function ExperienceMarquee() {
     );
 
     const ensureLength = (items: Experience[]) => {
+        if (!items || items.length === 0) return [];
         let repeated = [...items];
         while (repeated.length < 12) {
             repeated = [...repeated, ...items];
