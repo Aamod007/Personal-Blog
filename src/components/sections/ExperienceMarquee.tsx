@@ -166,12 +166,17 @@ export default function ExperienceMarquee() {
     const topIds = ["prof-1", "prof-2", "prof-3", "prof-4", "prof-5", "prof-6"];
     const bottomIds = ["prof-7", "prof-8", "prof-9", "prof-10", "prof-11", "prof-12"];
 
-    const row1 = experiences.filter((exp: Experience) =>
-        topIds.includes(exp.id)
+    const allIds = [...topIds, ...bottomIds];
+    
+    // Filter out items that use the user's photo
+    const validExperiences = experiences.filter((exp: Experience) =>
+        allIds.includes(exp.id) && exp.logo && !exp.logo.includes('ak.jpeg') && !exp.logo.includes('placeholder.png')
     );
-    const row2 = experiences.filter((exp: Experience) =>
-        bottomIds.includes(exp.id)
-    );
+
+    // Split the remaining items evenly into two rows
+    const half = Math.ceil(validExperiences.length / 2);
+    const row1 = validExperiences.slice(0, half);
+    const row2 = validExperiences.slice(half);
 
     const ensureLength = (items: Experience[]) => {
         if (!items || items.length === 0) return [];

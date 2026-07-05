@@ -9,15 +9,15 @@ export default function ExperienceStickyScroll({ isLowPowerMode = false }: { isL
     const journeyContent = [
         {
             label: "Higher Education • Current",
-            title: "Telkom University",
-            description: "Information Technology major with a GPV of 3.8/4.0. Focused on AI Engineering and Systems Research. Active in multiple high-impact research laboratories and national competitions.",
+            title: "Lovely Professional University (LPU)",
+            description: "Computer Software Engineering major. Focused on AI Engineering and Systems Research. Active in multiple high-impact research laboratories and national competitions.",
             content: (
                 <div className="h-full w-full flex items-center justify-center p-8 bg-black/5 dark:bg-white/5 relative group overflow-hidden border border-white/10">
                     {/* Background Logo */}
                     <div className="absolute inset-0">
                         <Image
-                            src="/assets/TelkomUniversityLogo.png?v=3"
-                            alt="Telkom University"
+                            src="/experience/lpu.jpg"
+                            alt="Lovely Professional University (LPU)"
                             fill
                             className="object-cover opacity-50 dark:opacity-40 blur-[2px] scale-110"
                             unoptimized
@@ -37,7 +37,7 @@ export default function ExperienceStickyScroll({ isLowPowerMode = false }: { isL
                         </div>
 
                         <div className="flex flex-wrap gap-2 justify-center mb-4">
-                            {["CGPA 7.3", "AI Researcher", "IT Major"].map(s => (
+                            {["CGPA 7.3", "AI Researcher", "CSE Major"].map(s => (
                                 <span key={s} className="px-3 py-1 rounded-full text-[10px] bg-white/10 text-white border border-white/20 font-mono font-bold backdrop-blur-md shadow-lg">
                                     {s}
                                 </span>
@@ -55,15 +55,15 @@ export default function ExperienceStickyScroll({ isLowPowerMode = false }: { isL
         },
         {
             label: "Foundation • High School",
-            title: "SMAN 88 Jakarta",
-            description: "Science Major (IPA). Developed strong analytical foundations in Mathematics and Physics, shaping a logical approach to problem-solving and technical engineering.",
+            title: "Sacred Heart Higher Secondary School",
+            description: "Science, Mathematics and Computer Science. Developed strong analytical foundations in Mathematics and Physics, shaping a logical approach to problem-solving and technical engineering.",
             content: (
                 <div className="h-full w-full flex items-center justify-center p-8 bg-black/5 dark:bg-white/5 relative group overflow-hidden border border-white/10">
                     {/* Background Logo */}
                     <div className="absolute inset-0">
                         <Image
-                            src="/assets/sman88logo.png"
-                            alt="SMAN 88 Jakarta"
+                            src="/experience/sacredheart.jpg"
+                            alt="Sacred Heart Higher Secondary School"
                             fill
                             className="object-cover opacity-20 dark:opacity-10 blur-sm scale-110"
                             unoptimized
@@ -82,7 +82,7 @@ export default function ExperienceStickyScroll({ isLowPowerMode = false }: { isL
                         </div>
 
                         <div className="flex flex-wrap gap-2 justify-center mb-4">
-                            {["Science Major", "Jakarta", "Foundation"].map(s => (
+                            {["Science", "Mathematics", "Computer Science"].map(s => (
                                 <span key={s} className="px-3 py-1 rounded-full text-[10px] bg-white/10 text-white border border-white/20 font-mono font-bold backdrop-blur-md shadow-lg">
                                     {s}
                                 </span>

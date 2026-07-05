@@ -59,7 +59,7 @@ ${projectList}
 ${expList || 'See portfolio for details.'}
 
 ## Education
-${eduList || 'Information Technology, Telkom University.'}
+${eduList || 'Computer Software Engineering, Lovely Professional University.'}
 
 ## Technical Skills
 ${skillList || 'AI, Machine Learning, Full Stack Development, Blockchain.'}
