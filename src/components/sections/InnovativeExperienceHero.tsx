@@ -32,12 +32,12 @@ const NODES_DATA: Record<string, NodeData[]> = {
         { label: 'GDSC ML Path', description: 'Mastering regression, classification, and core ML.', orbitIndex: 1, position: 0.05, imageUrl: "https://images.unsplash.com/photo-1527689368864-3a821dbccc34?q=80&w=400&auto=format&fit=crop" },
     ],
     journey: [
-        { label: 'Project Officer', description: 'Telkom Digistar - Managing digital talent programs.', orbitIndex: 0, position: 0.15, imageUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=400&auto=format&fit=crop" },
-        { label: 'Academic Affairs', description: 'HMIT Telkom - Planning academic & student support.', orbitIndex: 1, position: 0.35, imageUrl: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=400&auto=format&fit=crop" },
-        { label: 'Public Relations', description: 'Youth Ranger Indonesia - Brand narrative & engagement.', orbitIndex: 0, position: 0.55, imageUrl: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=400&auto=format&fit=crop" },
-        { label: 'Fundraising Lead', description: 'GI BEI Telkom - Strategic donor & sponsorship outreach.', orbitIndex: 1, position: 0.75, imageUrl: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=400&auto=format&fit=crop" },
-        { label: 'Network Assistant', description: 'IFLAB Assistant - Guiding Socket Programming projects.', orbitIndex: 0, position: 0.9, imageUrl: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=400&auto=format&fit=crop" },
-        { label: 'HR Management', description: 'CPS Laboratory - Fostering lab development & culture.', orbitIndex: 1, position: 0.02, imageUrl: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=400&auto=format&fit=crop" },
+        { label: 'Hacktoberfest Contributor', description: 'Open Source - Meaningful pull requests & fixes.', orbitIndex: 0, position: 0.15, imageUrl: "/assets/hacktoberfest.svg" },
+        { label: 'MLOps Intern', description: 'Futurence Tech - Streamlining ML pipelines.', orbitIndex: 1, position: 0.35, imageUrl: "/assets/futurence.webp" },
+        { label: 'Campus Ambassador', description: 'OSCG Campus Lead - Open-source awareness.', orbitIndex: 0, position: 0.55, imageUrl: "/assets/oscg.png" },
+        { label: 'SWOC Mentor', description: 'Social Winter of Code - Guiding open-source devs.', orbitIndex: 1, position: 0.75, imageUrl: "/assets/SWOC.png" },
+        { label: 'GSSoC Mentor', description: 'GirlScript Summer of Code - Mentoring on AI/ML.', orbitIndex: 0, position: 0.9, imageUrl: "/assets/gssoc.webp" },
+        { label: 'GSSoC Contributor', description: 'GirlScript Summer of Code - Resolving issues.', orbitIndex: 1, position: 0.02, imageUrl: "/assets/gssoc.webp" },
     ],
     experience: [
         { label: 'CV Researcher', description: 'CPS Lab - End-to-end intelligent model development.', orbitIndex: 0, position: 0.2, imageUrl: "https://images.unsplash.com/photo-1507413245164-6160d8298b31?q=80&w=400&auto=format&fit=crop" },
@@ -171,14 +171,16 @@ function OrbitalNode({ node, isHovered, onHover, onLeave }: {
 
                                     {/* Image Visualization Area */}
                                     <div className="aspect-video relative rounded-xl bg-neutral-900/50 dark:bg-neutral-200/50 overflow-hidden border border-white/5 dark:border-black/5">
-                                        {node.imageUrl ? (
+                                        {node.imageUrl?.endsWith('.pdf') ? (
+                                            <iframe src={node.imageUrl} className="w-full h-full border-none object-cover pointer-events-auto" />
+                                        ) : node.imageUrl ? (
                                             <Image src={node.imageUrl} alt={node.label} fill sizes="(max-width: 768px) 50px, 100px" className="object-cover" />
                                         ) : (
                                             <div className="absolute inset-0 flex items-center justify-center text-[10px] uppercase tracking-widest text-white/20 dark:text-black/20 font-mono">
                                                 Visualization Area
                                             </div>
                                         )}
-                                        <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/60 dark:from-neutral-50/60 to-transparent" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/60 dark:from-neutral-50/60 to-transparent pointer-events-none" />
                                     </div>
                                 </div>
                             </motion.div>

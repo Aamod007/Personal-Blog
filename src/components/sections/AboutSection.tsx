@@ -32,7 +32,9 @@ import { WakaTimeShowcase } from "@/components/ui/wakatime-showcase";
 import { ShowcaseStack } from "@/components/ui/showcase-stack";
 
 const showcaseMembers = [
-    ...portfolioData.experiences.map(exp => ({
+    ...portfolioData.experiences
+        .filter(exp => ['prof-11', 'prof-1', 'prof-8', 'prof-5', 'prof-2'].includes(exp.id))
+        .map(exp => ({
         id: exp.id,
         name: exp.company,
         role: exp.position,
@@ -627,11 +629,15 @@ export default function AboutSection() { console.log('SHOWCASE MEMBERS:', showca
                                             )}
 
                                             <div className="w-full mt-4 rounded-xl border border-neutral-200 dark:border-neutral-800 overflow-hidden relative group/card h-32">
-                                                <img
-                                                    src={member.image}
-                                                    alt={member.name}
-                                                    className="w-full h-full object-cover opacity-90 group-hover/card:opacity-100 transition-opacity duration-500 group-hover/card:scale-105"
-                                                />
+                                                {member.image?.split('?')[0].endsWith('.pdf') ? (
+                                                    <iframe src={member.image} className="w-full h-full border-none object-cover opacity-90 group-hover/card:opacity-100 transition-opacity duration-500 group-hover/card:scale-105 pointer-events-none" />
+                                                ) : (
+                                                    <img
+                                                        src={member.image}
+                                                        alt={member.name}
+                                                        className="w-full h-full object-cover opacity-90 group-hover/card:opacity-100 transition-opacity duration-500 group-hover/card:scale-105"
+                                                    />
+                                                )}
                                                 {member.social?.website && (
                                                     <div className="absolute inset-0 bg-black/50 opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
                                                         <Link href={member.social.website} target="_blank" className="px-5 py-2.5 bg-white text-black text-xs font-bold rounded-full hover:scale-105 transition-transform">

@@ -16,7 +16,7 @@ interface ProjectData {
   slug: string;
 }
 
-const PROJECT_DATA: ProjectData[] = portfolioData.projects.map((p) => ({
+const PROJECT_DATA: ProjectData[] = portfolioData.projects.slice(0, 5).map((p) => ({
   title: p.title,
   image: p.image || "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
   category: p.category || "General",

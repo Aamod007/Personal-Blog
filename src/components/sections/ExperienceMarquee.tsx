@@ -146,15 +146,19 @@ const GalleryItem = ({ exp }: { exp: Experience }) => {
 
     return (
         <div className="relative shrink-0 w-[clamp(140px,30vw,200px)] h-[clamp(80px,15vw,120px)] md:w-[280px] md:h-[160px] flex items-center justify-center group cursor-pointer">
-            <Image
-                src={logoSrc}
-                alt={exp.company}
-                fill
-                sizes="(max-width: 768px) 160px, 280px"
-                priority
-                unoptimized
-                className="object-contain grayscale hover:grayscale-0 opacity-70 group-hover:opacity-100 transition-all duration-300 scale-90 md:scale-100"
-            />
+            {logoSrc.split('?')[0].endsWith('.pdf') ? (
+                <iframe src={logoSrc} className="w-full h-full border-none object-contain pointer-events-none opacity-70 group-hover:opacity-100 transition-all duration-300 scale-90 md:scale-100 grayscale hover:grayscale-0" />
+            ) : (
+                <Image
+                    src={logoSrc}
+                    alt={exp.company}
+                    fill
+                    sizes="(max-width: 768px) 160px, 280px"
+                    priority
+                    unoptimized
+                    className="object-contain grayscale hover:grayscale-0 opacity-70 group-hover:opacity-100 transition-all duration-300 scale-90 md:scale-100"
+                />
+            )}
         </div>
     );
 };
@@ -163,15 +167,23 @@ export default function ExperienceMarquee() {
     const { isLowPowerMode } = usePerformance();
     const experiences = portfolioData.experiences;
 
-    const topIds = ["prof-1", "prof-2", "prof-3", "prof-4", "prof-5", "prof-6"];
-    const bottomIds = ["prof-7", "prof-8", "prof-9", "prof-10", "prof-11", "prof-12"];
+    const topIds = ["prof-1", "lead-1", "lead-2", "lead-3", "lead-4", "lead-5", "cert-1"];
+    const bottomIds = ["vol-1", "vol-2", "vol-3", "vol-4", "vol-5", "vol-6", "vol-7"];
 
     const allIds = [...topIds, ...bottomIds];
     
-    // Filter out items that use the user's photo
-    const validExperiences = experiences.filter((exp: Experience) =>
-        allIds.includes(exp.id) && exp.logo && !exp.logo.includes('ak.jpeg') && !exp.logo.includes('placeholder.png')
-    );
+    // Filter out items that use the user's photo and ensure unique logos
+    const uniqueLogos = new Set<string>();
+    const validExperiences = experiences.filter((exp: Experience) => {
+        if (!allIds.includes(exp.id) || !exp.logo || exp.logo.includes('ak.jpeg') || exp.logo.includes('placeholder.png') || exp.logo.includes('.pdf')) {
+            return false;
+        }
+        if (uniqueLogos.has(exp.logo)) {
+            return false;
+        }
+        uniqueLogos.add(exp.logo);
+        return true;
+    });
 
     // Split the remaining items evenly into two rows
     const half = Math.ceil(validExperiences.length / 2);
