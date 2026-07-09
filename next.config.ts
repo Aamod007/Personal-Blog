@@ -14,6 +14,7 @@ const nextConfig: NextConfig = {
         ],
         formats: ['image/avif', 'image/webp'],
     },
+    allowedDevOrigins: ['behalf-matched-novelty-toll.trycloudflare.com'],
 };
 
 export default withNextIntl(nextConfig);
