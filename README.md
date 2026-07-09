@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="public/Aamod007_light.svg" alt="Logo" width="80" height="80" />
+<img src="public/Aamod007_light.svg" alt="Logo" width="100" height="100" />
 
 # ✦ Aamod Kumar — Personal Portfolio
 
@@ -13,10 +13,8 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.3-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![Three.js](https://img.shields.io/badge/Three.js-0.170-000000?style=for-the-badge&logo=threedotjs&logoColor=white)](https://threejs.org/)
-[![Vercel](https://img.shields.io/badge/Deployed_on-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
 
 [![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Visit_Portfolio-6366f1?style=for-the-badge)](https://personal-blog-aamod.vercel.app)
-[![GitHub](https://img.shields.io/badge/GitHub-Aamod007-181717?style=for-the-badge&logo=github)](https://github.com/Aamod007)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/aamod-kumar/)
 
 ---
@@ -24,7 +22,6 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/Aamod007/PersonalBlog?style=flat-square&color=6366f1)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Aamod007/PersonalBlog?style=flat-square&color=a855f7)
 ![License](https://img.shields.io/badge/license-MIT-22c55e?style=flat-square)
-![PRs Welcome](https://img.shields.io/badge/PRs-welcome-ec4899?style=flat-square)
 
 </div>
 
@@ -32,9 +29,9 @@
 
 ## ✨ Overview
 
-> A **production-grade creative portfolio** engineered to showcase expertise in Artificial Intelligence, Cloud/Backend Architecture, and Blockchain. This platform transcends traditional static websites by delivering a high-performance interactive experience powered by advanced WebGL shaders, physics-based simulations, real-time data integration, and an AI-powered chatbot assistant.
+> A **production-grade creative portfolio** engineered to showcase expertise in Artificial Intelligence, Cloud/Backend Architecture, and Blockchain. This platform transcends traditional static websites by delivering a high-performance interactive experience powered by advanced WebGL shaders, physics-based simulations, real-time data integration, and a dual-provider AI chatbot assistant.
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────────────┐
 │                                                                     │
 │    👤  Aamod Kumar  (@Aamod007)                                     │
@@ -48,26 +45,26 @@
 
 ---
 
-## 🌟 Features
+## 🌟 Key Features
 
 <table>
 <tr>
 <td width="50%">
 
 ### 🎮 Immersive 3D Experience
-- **Physics-simulated 3D Lanyard** — Interactive ID card powered by Rapier physics engine that reacts to mouse movement in real-time
-- **WebGL Hyperspeed Effect** — Custom GLSL shader-based warp/space background
-- **Particle Systems** — Configurable density particle fields with TSParticles
-- **Globe Visualization** — Interactive 3D world globe in the About section
+- **Physics-simulated 3D Lanyard** — Interactive ID card powered by the Rapier physics engine that reacts to mouse movement in real-time.
+- **WebGL Hyperspeed Effect** — Custom GLSL shader-based warp/space background.
+- **Particle Systems** — Configurable density particle fields built with TSParticles.
+- **Interactive Globe** — 3D world globe visualization in the About section.
 
 </td>
 <td width="50%">
 
-### 📊 Real-Time Data
-- **GitHub API (GraphQL)** — Live contribution heatmap, repo stats, language breakdown
-- **WakaTime API** — Live coding activity: top languages, hours, and streaks
-- **1-hour cache revalidation** — Fresh data without hammering APIs
-- **Graceful error fallbacks** — Never shows broken states to the user
+### 📊 Real-Time Developer Data
+- **GitHub Integration** — Live contribution heatmap, repository stats, and language breakdown using the GitHub API.
+- **LeetCode & Kaggle Metrics** — Live tracking of coding algorithms, contest ratings, solved problems, and ML achievements.
+- **Efficient Caching** — Intelligent background revalidation prevents rate-limiting and ensures high performance.
+- **Graceful Fallbacks** — Highly resilient UI that never shows broken states.
 
 </td>
 </tr>
@@ -75,19 +72,18 @@
 <td width="50%">
 
 ### 🎨 Advanced Animations
-- **Framer Motion** — Fluid page transitions and micro-interactions
-- **GSAP ScrollTrigger** — Complex, scroll-driven timeline animations
-- **React Spring** — Physics-based spring animations for natural feel
-- **Custom Hooks** — `useTextScramble`, `useTypewriter`, `useCountUp`, `useScrollAnimation`
+- **Framer Motion** — Fluid page transitions, modal reveals, and smooth micro-interactions.
+- **GSAP ScrollTrigger** — Complex, highly-choreographed scroll-driven timeline animations.
+- **React Spring** — Physics-based spring animations for a more natural, organic feel.
+- **Custom Hooks** — Purpose-built hooks for scramble text, typing effects, and scroll monitoring.
 
 </td>
 <td width="50%">
 
 ### 🤖 AI Portfolio Chatbot
-- **Groq + Gemini dual-provider** — Auto-fallback if one limit is hit
-- **Portfolio-aware context** — Reads all data from `portfolio.ts` as knowledge base
-- **Markdown rendering** — Bold, italic, lists, code, links rendered in chat
-- **Smart UX** — Typing indicator, retry on error, suggested questions
+- **Dual-Provider Architecture** — Uses Groq (LLaMA 3.1) for blazing fast responses, with a seamless fallback to Google Gemini.
+- **Context-Aware** — The AI reads the entire `portfolio.ts` configuration, effectively knowing everything about my experience and projects.
+- **Rich Markdown UI** — Renders bold text, italics, bullet lists, code snippets, and hyperlinks directly in the chat interface.
 
 </td>
 </tr>
@@ -97,44 +93,28 @@
 
 ## ⚙️ Tech Stack
 
-### Core Framework
+**Core Framework**: `Next.js 16 (App Router)` · `React 19` · `TypeScript 5.3` · `Node.js 18+`
 
-```
-Next.js 16  ·  React 19  ·  TypeScript 5.3  ·  Node.js 18+
-```
+**3D Graphics & Animation**: 
+`Three.js` · `@react-three/fiber` · `@react-three/rapier` · `Framer Motion` · `GSAP`
 
-### 3D Graphics & Animation
+**Styling & UI**: 
+`Tailwind CSS` · `shadcn/ui` · `Lucide Icons` · `React Icons`
 
-[![Three.js](https://img.shields.io/badge/Three.js-000?logo=threedotjs&style=flat-square)](https://threejs.org/)
-[![React Three Fiber](https://img.shields.io/badge/@react--three/fiber-000?logo=threedotjs&style=flat-square)](https://r3f.docs.pmnd.rs/)
-[![Rapier](https://img.shields.io/badge/@react--three/rapier-E63012?style=flat-square)](https://rapier.rs/)
-[![Framer Motion](https://img.shields.io/badge/Framer_Motion-11-0055FF?style=flat-square&logo=framer)](https://www.framer.com/motion/)
-[![GSAP](https://img.shields.io/badge/GSAP-3.14-88CE02?style=flat-square)](https://greensock.com/gsap/)
-
-### Styling & UI
-
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-06B6D4?style=flat-square&logo=tailwindcss)](https://tailwindcss.com/)
-[![shadcn/ui](https://img.shields.io/badge/shadcn/ui-New_York-000?style=flat-square)](https://ui.shadcn.com/)
-[![Lucide](https://img.shields.io/badge/Lucide_React-0.309-F97316?style=flat-square)](https://lucide.dev/)
-[![React Icons](https://img.shields.io/badge/React_Icons-5.5-E11D48?style=flat-square)](https://react-icons.github.io/)
-
-### AI & External APIs
-
-[![Groq](https://img.shields.io/badge/Groq_API-LLaMA_3.1-F97316?style=flat-square)](https://groq.com/)
-[![Gemini](https://img.shields.io/badge/Gemini_1.5_Flash-4285F4?style=flat-square&logo=google)](https://ai.google.dev/)
-[![GitHub GraphQL](https://img.shields.io/badge/GitHub_GraphQL_API-181717?style=flat-square&logo=github)](https://docs.github.com/en/graphql)
-[![WakaTime](https://img.shields.io/badge/WakaTime_API-5C4EE5?style=flat-square)](https://wakatime.com/)
+**AI & External APIs**: 
+`Groq API (LLaMA)` · `Gemini API (Flash)` · `GitHub GraphQL` · `LeetCode API` · `Kaggle API`
 
 ---
 
 ## 🚀 Getting Started
 
+Follow these steps to run the portfolio locally on your machine.
+
 ### Prerequisites
 
-```bash
-Node.js >= 18.0.0
-npm >= 9.0.0
-```
+Ensure you have the following installed:
+- [Node.js](https://nodejs.org/en/) (v18.0.0 or higher)
+- [npm](https://www.npmjs.com/) (v9.0.0 or higher) or yarn/pnpm
 
 ### 1. Clone the repository
 
@@ -151,20 +131,33 @@ npm install
 
 ### 3. Configure environment variables
 
-Create a `.env.local` file in the root directory:
+To run the APIs (like the Chatbot, LeetCode stats, Kaggle stats, and the Email contact form), you will need to set up your environment variables.
+
+Create a new file named `.env.local` in the root directory and add the following keys:
 
 ```env
-# ─── GitHub Integration ───────────────────────────────
-NEXT_PUBLIC_GITHUB_USERNAME=Aamod007
-GITHUB_TOKEN=your_personal_access_token
+# ─── Data & Platform APIs ─────────────────────────────
+# Required for Kaggle stats integration
+KAGGLE_USERNAME=your_kaggle_username
+KAGGLE_API_TOKEN=your_kaggle_api_token
 
-# ─── WakaTime Integration ─────────────────────────────
-WAKATIME_API_KEY=your_wakatime_api_key
+# Required for LeetCode stats integration
+LEETCODE_USERNAME=your_leetcode_username
 
-# ─── AI Chatbot ───────────────────────────────────────
+# ─── Email Configuration (Contact Form) ───────────────
+# Uses Nodemailer (e.g., Gmail App Passwords)
+EMAIL_USER=your_email@gmail.com
+EMAIL_APP_PASSWORD=your_app_password
+
+# ─── AI Chatbot Providers ─────────────────────────────
+# Get a free key at https://console.groq.com/keys
 GROQ_API_KEY=your_groq_api_key
+
+# Get a free key at https://aistudio.google.com/app/apikey
 GEMINI_API_KEY=your_gemini_api_key
 ```
+
+> **Note**: Do NOT commit your `.env.local` file to version control. It is already added to `.gitignore`.
 
 ### 4. Run the development server
 
@@ -172,15 +165,13 @@ GEMINI_API_KEY=your_gemini_api_key
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
 ---
 
 ## 🧠 Skills & Expertise
 
-### Proficiency
-
-```
+```text
   Full Stack Development   ████████████████████  Expert
   Python & TypeScript      ████████████████████  Expert
   ─────────────────────────────────────────────
@@ -194,15 +185,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-## 🏆 Achievements & Certifications
-
-- **GirlScript Summer of Code 2025** — Mentor & Contributor
-- **30+ Certifications** across AI, Web Development, Google Cloud, and Design.
-- Features highly dynamic, filterable portfolio view on the `/achievements` route.
-
----
-
-## 📬 Contact
+## 📬 Let's Connect
 
 <div align="center">
 
