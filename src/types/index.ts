@@ -37,7 +37,7 @@ export interface Experience {
     endDate?: string;
     isOngoing: boolean;
     location?: string;
-    type: 'full-time' | 'part-time' | 'contract' | 'internship' | 'freelance' | 'volunteer' | 'apprenticeship' | 'self-employed';
+    type: 'full-time' | 'part-time' | 'contract' | 'internship' | 'freelance' | 'volunteer' | 'apprenticeship' | 'self-employed' | 'certification';
     logo?: string;
     link?: string;
     galleryImages?: string[];
