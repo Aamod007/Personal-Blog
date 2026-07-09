@@ -257,7 +257,8 @@
             "freelance": "Freelance",
             "contract": "Contract",
             "apprenticeship": "Apprenticeship",
-            "volunteer": "Volunteer"
+            "volunteer": "Volunteer",
+            "certification": "Certification"
         },
         "filters": {
             "all": "All",
