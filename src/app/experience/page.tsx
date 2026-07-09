@@ -502,7 +502,7 @@ function CollapsibleExperienceCard({ exp, idx, isLowPowerMode }: { exp: Experien
                             {exp.type && (
                                 <>
                                     <span className="w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-700" />
-                                    <span className="capitalize">{t(`type.${exp.type}`)}</span>
+                                    <span className="capitalize">{t(`type.${exp.type.toLowerCase()}`)}</span>
                                 </>
                             )}
                             {exp.location && (

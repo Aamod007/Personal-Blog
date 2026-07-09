@@ -258,7 +258,14 @@
             "contract": "Kontrak",
             "apprenticeship": "Apprenticeship",
             "volunteer": "Sukarelawan",
-            "certification": "Sertifikasi"
+            "certification": "Sertifikasi",
+            "course": "Kursus",
+            "badge": "Lencana",
+            "mentor": "Mentor",
+            "contributor": "Kontributor",
+            "certificate": "Sertifikat",
+            "workshop": "Lokakarya",
+            "contribution": "Kontribusi"
         },
         "filters": {
             "all": "Semua",

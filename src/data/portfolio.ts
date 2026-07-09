@@ -780,7 +780,7 @@ export const portfolioData: PortfolioData = {
             location: 'Remote',
             type: 'volunteer',
             logo: '/assets/oscg.png',
-            externalLink: '#',
+            externalLink: '/404',
         },
         {
             id: 'vol-4',
@@ -818,7 +818,7 @@ export const portfolioData: PortfolioData = {
             location: 'Remote',
             type: 'volunteer',
             logo: '/assets/lets upgrade .png',
-            externalLink: '#',
+            externalLink: '/404',
         },
         {
             id: 'vol-6',
@@ -935,23 +935,22 @@ export const portfolioData: PortfolioData = {
             externalLink: 'https://www.linkedin.com/posts/aamod-kumar_swoc-swoc6-socialwinterofcode-activity-7395018856911527936-dkAo',
         },
         {
-            id: 'lead-5',
-            company: 'Open Source Connect (OSCG)',
-            position: 'Mentor',
-            description: 'Guiding new contributors in open-source development, helping with Git/GitHub workflows, project architecture, debugging, and pull-request quality.',
+            id: 'prof-amazon',
+            company: 'Amazon',
+            position: 'ML Summer School 2026 Participant',
+            description: 'Shortlisted among the top 3000 participants across India to join the Amazon ML Summer School cohort. Engaged in advanced machine learning sessions with Amazon Scientists.',
             responsibilities: [
-                'Guiding new contributors in open-source development',
-                'Helping with project architecture, debugging, and pull-request quality',
-                'Supporting AI/ML and backend projects while promoting collaborative engineering practices'
+                'Selected from thousands of applicants across India',
+                'Learning advanced machine learning concepts directly from Amazon Scientists'
             ],
-            skills: ['Mentorship', 'Git/GitHub', 'Project Architecture', 'Collaborative Engineering'],
-            startDate: '2026-01-01',
-            endDate: '2026-03-31',
-            isOngoing: false,
+            skills: ['Machine Learning', 'Artificial Intelligence', 'Data Science'],
+            startDate: '2026-07-08',
+            endDate: '2026-08-30',
+            isOngoing: true,
             location: 'Remote',
-            type: 'volunteer',
-            logo: '/assets/oscg.png',
-            externalLink: 'https://www.linkedin.com/posts/aamod-kumar_opensource-mentorship-techcommunity-activity-7421075766597169152-fOYs',
+            type: 'internship',
+            logo: '/assets/Amazon.webp',
+            externalLink: '/404',
         },
         {
             id: 'lead-1',
@@ -970,7 +969,7 @@ export const portfolioData: PortfolioData = {
             location: 'Remote',
             type: 'volunteer',
             logo: '/assets/oscg.png',
-            externalLink: '#',
+            externalLink: '/404',
         },
         {
             id: 'prof-1',

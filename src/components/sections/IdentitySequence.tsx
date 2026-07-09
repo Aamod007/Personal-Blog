@@ -152,7 +152,7 @@ export const IdentitySequence = ({ scrollYProgress, isVisible }: IdentitySequenc
                         <motion.div style={{ opacity: cardContentOpacity }} className="w-full">
                             <InfiniteMarquee
                                 items={marqueeItems}
-                                speed={18}
+                                speed={18}  
                                 className="w-full"
                                 itemClassName="py-12"
                             />
@@ -187,7 +187,7 @@ export const IdentitySequence = ({ scrollYProgress, isVisible }: IdentitySequenc
                                                 style={{ y: imageParallaxY }}
                                             >
                                                 <Image
-                                                    src={portfolioData.personal.avatar}
+                                                    src="/gallery/WhatsApp Image 2026-07-09 at 11.23.47 AM.jpeg"
                                                     alt="Profile"
                                                     fill
                                                     className="object-cover object-bottom grayscale-0"
