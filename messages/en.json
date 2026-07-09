@@ -258,14 +258,7 @@
             "contract": "Contract",
             "apprenticeship": "Apprenticeship",
             "volunteer": "Volunteer",
-            "certification": "Certification",
-            "course": "Course",
-            "badge": "Badge",
-            "mentor": "Mentor",
-            "contributor": "Contributor",
-            "certificate": "Certificate",
-            "workshop": "Workshop",
-            "contribution": "Contribution"
+            "certification": "Certification"
         },
         "filters": {
             "all": "All",

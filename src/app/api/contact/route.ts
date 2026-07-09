@@ -37,17 +37,36 @@ export async function POST(req: Request) {
 
         // Email options
         const mailOptions = {
-            from: process.env.EMAIL_USER || '',
-            to: process.env.EMAIL_USER || '', // Where you want to receive the messages
-            subject: `New Message: ${safeSubject}`,
+            from: process.env.EMAIL_USER || 'aamoddev23@gmail.com',
+            to: 'aamoddev23@gmail.com', // Exactly where you want to receive it
+            subject: `New Project Inquiry: ${safeSubject}`,
             html: `
-                <div style="font-family: sans-serif; padding: 20px; border: 1px solid #eee; border-radius: 8px;">
-                    <h3 style="color: #333;">You have a new message from your website!</h3>
-                    <p><strong>Name: </strong> ${safeName}</p>
-                    <p><strong>Email: </strong> ${safeEmail}</p>
-                    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;" />
-                    <p><strong>Message:</strong></p>
-                    <p style="white-space: pre-wrap; color: #555;">${safeMessage}</p>
+                <div style="font-family: 'Inter', Helvetica, sans-serif; max-width: 600px; margin: 0 auto; background-color: #ffffff; border: 1px solid #eaeaea; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+                    <div style="background-color: #000000; padding: 32px 24px; text-align: center;">
+                        <h2 style="color: #ffffff; margin: 0; font-size: 24px; font-weight: 700; letter-spacing: 0.5px;">New Project Inquiry</h2>
+                        <p style="color: #a1a1aa; margin: 8px 0 0 0; font-size: 14px;">Via Personal Portfolio Website</p>
+                    </div>
+                    <div style="padding: 32px 24px;">
+                        <div style="margin-bottom: 24px;">
+                            <p style="margin: 0 0 4px 0; font-size: 12px; color: #71717a; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600;">Client Name</p>
+                            <p style="margin: 0; font-size: 16px; color: #18181b; font-weight: 500;">${safeName}</p>
+                        </div>
+                        <div style="margin-bottom: 24px;">
+                            <p style="margin: 0 0 4px 0; font-size: 12px; color: #71717a; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600;">Email Address</p>
+                            <a href="mailto:${safeEmail}" style="margin: 0; font-size: 16px; color: #2563eb; font-weight: 500; text-decoration: none;">${safeEmail}</a>
+                        </div>
+                        <div style="margin-bottom: 24px;">
+                            <p style="margin: 0 0 4px 0; font-size: 12px; color: #71717a; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600;">Subject</p>
+                            <p style="margin: 0; font-size: 16px; color: #18181b; font-weight: 500;">${safeSubject}</p>
+                        </div>
+                        <div style="background-color: #f4f4f5; border-radius: 8px; padding: 20px; margin-top: 32px;">
+                            <p style="margin: 0 0 12px 0; font-size: 12px; color: #71717a; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600;">Message</p>
+                            <p style="margin: 0; font-size: 15px; color: #3f3f46; line-height: 1.6; white-space: pre-wrap;">${safeMessage}</p>
+                        </div>
+                    </div>
+                    <div style="background-color: #fafafa; border-top: 1px solid #eaeaea; padding: 16px 24px; text-align: center;">
+                        <p style="margin: 0; font-size: 12px; color: #a1a1aa;">This email was sent securely from your portfolio's contact form.</p>
+                    </div>
                 </div>
             `,
         };

@@ -1,4 +1,4 @@
-import { PortfolioData } from '@/types';
+﻿import { PortfolioData } from '@/types';
 
 export const portfolioData: PortfolioData = {
     personal: {
@@ -62,7 +62,7 @@ export const portfolioData: PortfolioData = {
             image: '/project/azure-pipeline.png',
             title: 'CI/CD Azure Data Factory Pipeline',
             description: 'Production-style CI/CD pipeline for Azure Data Factory across Dev, QA, and Production environments.',
-            longDescription: 'This project documents the design and implementation of a production-style CI/CD pipeline for Azure Data Factory (ADF), built end-to-end across three isolated environments — Dev → QA → Production — using Azure DevOps, Git, ARM templates, and YAML pipelines. It treats ADF as infrastructure-as-code: every linked service, dataset, pipeline, and trigger is version-controlled, exported as an ARM template, and promoted through environments via automated pipelines with manual approval gates before production.',
+            longDescription: 'This project documents the design and implementation of a production-style CI/CD pipeline for Azure Data Factory (ADF), built end-to-end across three isolated environments â€” Dev â†’ QA â†’ Production â€” using Azure DevOps, Git, ARM templates, and YAML pipelines. It treats ADF as infrastructure-as-code: every linked service, dataset, pipeline, and trigger is version-controlled, exported as an ARM template, and promoted through environments via automated pipelines with manual approval gates before production.',
 
             techStack: ['Azure Data Factory', 'Azure DevOps', 'YAML Pipelines', 'ARM Templates', 'Azure Key Vault', 'ADLS Gen2', 'PowerShell', 'Node.js'],
             tools: ['Azure Portal', 'Azure DevOps', 'VS Code', 'Git'],
@@ -74,21 +74,21 @@ export const portfolioData: PortfolioData = {
             customTimeline: 'May - June 2026',
             team: 'Personal Project',
 
-            highlights: ['3-Environment Promotion (Dev→QA→Prod)', 'Infrastructure-as-Code for ADF', 'Managed Identity Authentication'],
+            highlights: ['3-Environment Promotion (Devâ†’QAâ†’Prod)', 'Infrastructure-as-Code for ADF', 'Managed Identity Authentication'],
             category: 'Cloud & DevOps',
             features: [
                 {
                     title: 'CI/CD Pipeline Architecture',
                     items: [
                         '**Automated ARM Export**: CI pipeline uses `@microsoft/azure-data-factory-utilities` npm package to validate and export ARM templates on every merge to main.',
-                        '**Multi-Stage Deployment**: YAML-based CD pipeline promotes artifacts through Dev → QA → Production with environment-specific parameter overrides.',
+                        '**Multi-Stage Deployment**: YAML-based CD pipeline promotes artifacts through Dev â†’ QA â†’ Production with environment-specific parameter overrides.',
                         '**Manual Approval Gate**: Production deployment requires explicit human approval via Azure DevOps Environments before proceeding.'
                     ]
                 },
                 {
                     title: 'Security & Authentication',
                     items: [
-                        '**Managed Identity**: All inter-service communication uses System-Assigned Managed Identity — zero hardcoded keys or secrets anywhere.',
+                        '**Managed Identity**: All inter-service communication uses System-Assigned Managed Identity â€” zero hardcoded keys or secrets anywhere.',
                         '**Key Vault Integration**: Centralized secret management using Azure Key Vault with environment-scoped access policies.',
                         '**Branch Protection**: PR-gated merges with minimum reviewer requirements and fast-forward merge strategy.'
                     ]
@@ -148,7 +148,7 @@ export const portfolioData: PortfolioData = {
             image: '/project/kube-mcp.png',
             title: 'Kube-MCP',
             description: 'Production-ready Model Context Protocol (MCP) server for Kubernetes diagnostics and management.',
-            longDescription: 'Kube-MCP is a production-grade Model Context Protocol (MCP) server that exposes Kubernetes clusters as structured, AI-callable tools. It enables LLM agents to introspect, diagnose, and remediate cluster issues through natural language — eliminating the need for kubectl expertise. Built in Go with the Kubernetes Client-Go library, it translates MCP JSON-RPC tool calls into strongly-typed API requests with token-efficient responses optimized for LLM context windows.',
+            longDescription: 'Kube-MCP is a production-grade Model Context Protocol (MCP) server that exposes Kubernetes clusters as structured, AI-callable tools. It enables LLM agents to introspect, diagnose, and remediate cluster issues through natural language â€” eliminating the need for kubectl expertise. Built in Go with the Kubernetes Client-Go library, it translates MCP JSON-RPC tool calls into strongly-typed API requests with token-efficient responses optimized for LLM context windows.',
 
             techStack: ['Go', 'Kubernetes', 'Client-Go', 'MCP Protocol', 'Docker', 'GoReleaser', 'JSON-RPC', 'slog'],
             tools: ['VS Code', 'kubectl', 'Docker', 'Claude Desktop', 'Cursor'],
@@ -234,7 +234,7 @@ export const portfolioData: PortfolioData = {
             image: '/project/kube-policy.png',
             title: 'Kube-Policy-Engine',
             description: 'Production-grade Kubernetes admission controller with built-in OPA/Rego policy engine.',
-            longDescription: 'Kube-Policy-Engine is a production-grade Kubernetes admission controller with a built-in OPA/Rego policy engine. It enforces guardrails, applies best practices, and mutates resources in real-time — all through native Kubernetes Custom Resources. The system supports both enforce and audit modes, with Prometheus metrics for observability. Built with Go using controller-runtime and Kubebuilder, it deploys via Helm with cert-manager for TLS.',
+            longDescription: 'Kube-Policy-Engine is a production-grade Kubernetes admission controller with a built-in OPA/Rego policy engine. It enforces guardrails, applies best practices, and mutates resources in real-time â€” all through native Kubernetes Custom Resources. The system supports both enforce and audit modes, with Prometheus metrics for observability. Built with Go using controller-runtime and Kubebuilder, it deploys via Helm with cert-manager for TLS.',
 
             techStack: ['Go', 'Kubernetes', 'OPA/Rego', 'Kubebuilder', 'controller-runtime', 'Helm', 'cert-manager', 'Prometheus', 'Docker'],
             tools: ['VS Code', 'kubectl', 'kind', 'Helm', 'Docker'],
@@ -347,14 +347,14 @@ export const portfolioData: PortfolioData = {
                     title: 'Job Management',
                     items: [
                         '**Full CRUD**: Create, Read, Update, Delete jobs via REST API endpoints.',
-                        '**Status Tracking**: Monitor job lifecycle (pending → running → success/failed/cancelled) in real-time.',
+                        '**Status Tracking**: Monitor job lifecycle (pending â†’ running â†’ success/failed/cancelled) in real-time.',
                         '**Retry & Cancel**: Retry failed jobs or cancel running ones directly from the dashboard.'
                     ]
                 },
                 {
                     title: 'Authentication & Security',
                     items: [
-                        '**Raw JWT Implementation**: Secure user registration and login with hand-rolled JWT — no third-party auth dependency.',
+                        '**Raw JWT Implementation**: Secure user registration and login with hand-rolled JWT â€” no third-party auth dependency.',
                         '**Password Hashing**: Bcrypt-based password storage for credential security.',
                         '**Token Validation**: Middleware-based authentication for all protected API endpoints.'
                     ]
@@ -440,7 +440,7 @@ export const portfolioData: PortfolioData = {
                 {
                     title: 'Real-time Analysis',
                     items: [
-                        '**Zeek PCAP Processing**: Process PCAP files through Zeek → conn.log → 41-feature extraction → ML prediction pipeline.',
+                        '**Zeek PCAP Processing**: Process PCAP files through Zeek â†’ conn.log â†’ 41-feature extraction â†’ ML prediction pipeline.',
                         '**WebSocket Dashboard**: Live monitoring with VM-style simulation windows for real-time attack visualization.',
                         '**Terminal Commands**: Full CLI interface (`/attack`, `/zeek pcap`, `/stats`, `/export`) for SOC operators.'
                     ]
@@ -577,7 +577,7 @@ export const portfolioData: PortfolioData = {
             image: '/project/kolam-ai.png',
             title: 'Kolam AI',
             description: 'AI and AR platform to preserve, analyze, and generate traditional Indian Kolam (Rangoli) designs.',
-            longDescription: 'Kolam AI is a digital platform that uses Artificial Intelligence (AI) and Augmented Reality (AR) to recognize, create, and preserve Kolam (Rangoli) designs — traditional Indian art forms with deep cultural, artistic, and mathematical significance. Users can upload a Kolam photo for AI-powered pattern recognition including dot grid detection, symmetry analysis, and style classification. The platform also generates new Kolam patterns, provides step-by-step drawing tutorials, and features a community hub with leaderboards and challenges.',
+            longDescription: 'Kolam AI is a digital platform that uses Artificial Intelligence (AI) and Augmented Reality (AR) to recognize, create, and preserve Kolam (Rangoli) designs â€” traditional Indian art forms with deep cultural, artistic, and mathematical significance. Users can upload a Kolam photo for AI-powered pattern recognition including dot grid detection, symmetry analysis, and style classification. The platform also generates new Kolam patterns, provides step-by-step drawing tutorials, and features a community hub with leaderboards and challenges.',
 
             techStack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Supabase', 'Python', 'Shadcn UI'],
             tools: ['VS Code', 'Supabase Dashboard', 'Vercel', 'Figma'],
@@ -935,22 +935,23 @@ export const portfolioData: PortfolioData = {
             externalLink: 'https://www.linkedin.com/posts/aamod-kumar_swoc-swoc6-socialwinterofcode-activity-7395018856911527936-dkAo',
         },
         {
-            id: 'prof-amazon',
-            company: 'Amazon',
-            position: 'ML Summer School 2026 Participant',
-            description: 'Shortlisted among the top 3000 participants across India to join the Amazon ML Summer School cohort. Engaged in advanced machine learning sessions with Amazon Scientists.',
+            id: 'lead-5',
+            company: 'Open Source Connect (OSCG)',
+            position: 'Mentor',
+            description: 'Guiding new contributors in open-source development, helping with Git/GitHub workflows, project architecture, debugging, and pull-request quality.',
             responsibilities: [
-                'Selected from thousands of applicants across India',
-                'Learning advanced machine learning concepts directly from Amazon Scientists'
+                'Guiding new contributors in open-source development',
+                'Helping with project architecture, debugging, and pull-request quality',
+                'Supporting AI/ML and backend projects while promoting collaborative engineering practices'
             ],
-            skills: ['Machine Learning', 'Artificial Intelligence', 'Data Science'],
-            startDate: '2026-07-08',
-            endDate: '2026-08-30',
-            isOngoing: true,
+            skills: ['Mentorship', 'Git/GitHub', 'Project Architecture', 'Collaborative Engineering'],
+            startDate: '2026-01-01',
+            endDate: '2026-03-31',
+            isOngoing: false,
             location: 'Remote',
-            type: 'internship',
-            logo: '/assets/Amazon.webp',
-            externalLink: '/404',
+            type: 'volunteer',
+            logo: '/assets/oscg.png',
+            externalLink: 'https://www.linkedin.com/posts/aamod-kumar_opensource-mentorship-techcommunity-activity-7421075766597169152-fOYs',
         },
         {
             id: 'lead-1',
@@ -1043,7 +1044,7 @@ export const portfolioData: PortfolioData = {
         },
     ],
     achievements: [
-        // ── Certifications (newest → oldest) ──
+        // â”€â”€ Certifications (newest â†’ oldest) â”€â”€
 
         // --- 2026 ---
         {

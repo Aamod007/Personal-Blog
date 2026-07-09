@@ -33,7 +33,7 @@ import { ShowcaseStack } from "@/components/ui/showcase-stack";
 
 const showcaseMembers = [
     ...portfolioData.experiences
-        .filter(exp => ['prof-11', 'prof-1', 'prof-8', 'prof-5', 'prof-2'].includes(exp.id))
+        .filter(exp => ['vol-6', 'prof-1', 'cert-1', 'lead-2', 'vol-5'].includes(exp.id))
         .map(exp => ({
         id: exp.id,
         name: exp.company,
@@ -54,21 +54,12 @@ const showcaseMembers = [
 ];
 
 const GALLERY_IMAGES = [
-    "/gallery/Foto Utama.jpeg",
-    "/gallery/FotoSC1.jpeg",
-    "/gallery/FotoSC2.jpeg",
-    "/gallery/FotoSC3.jpeg",
-    "/gallery/FotoSC4.jpeg",
-    "/gallery/FotoSC5.jpeg",
-    "/gallery/academicaffairsdivision1.jpg",
-    "/gallery/computernetworkpracticumassistant2.jpg",
-    "/gallery/dataentryassistant1.jpg",
-    "/gallery/delegateaiesecfutureleaders20241.jpg",
-    "/gallery/environmentalhygieneteam1.jpg",
-    "/gallery/environmentalhygieneteam2.jpg",
-    "/gallery/logisticsoperatorcampusexpo20242.jpg",
-    "/gallery/researchassistant1.jpg",
-    "/gallery/researchassistant2.jpg"
+    "/gallery/hackathon-event.jpeg",
+    "/gallery/team-meeting.jpeg",
+    "/gallery/project-presentation.jpeg",
+    "/gallery/campus-expo.jpeg",
+    "/gallery/code-review.jpeg",
+    "/gallery/aamod-kumar.jpeg"
 ];
 
 const AboutLeadInImageStack = () => {
@@ -397,21 +388,12 @@ const AuditFunnel = () => {
 
     useEffect(() => {
         const galleryItems = [
-            "/gallery/Foto Utama.jpeg",
-            "/gallery/FotoSC1.jpeg",
-            "/gallery/FotoSC2.jpeg",
-            "/gallery/FotoSC3.jpeg",
-            "/gallery/FotoSC4.jpeg",
-            "/gallery/FotoSC5.jpeg",
-            "/gallery/academicaffairsdivision1.jpg",
-            "/gallery/computernetworkpracticumassistant2.jpg",
-            "/gallery/dataentryassistant1.jpg",
-            "/gallery/delegateaiesecfutureleaders20241.jpg",
-            "/gallery/environmentalhygieneteam1.jpg",
-            "/gallery/environmentalhygieneteam2.jpg",
-            "/gallery/logisticsoperatorcampusexpo20242.jpg",
-            "/gallery/researchassistant1.jpg",
-            "/gallery/researchassistant2.jpg"
+            "/gallery/hackathon-event.jpeg",
+            "/gallery/team-meeting.jpeg",
+            "/gallery/project-presentation.jpeg",
+            "/gallery/campus-expo.jpeg",
+            "/gallery/code-review.jpeg",
+            "/gallery/aamod-kumar.jpeg"
         ];
         // Shuffle and pick 8 random images for the trail to avoid overwhelming the DOM
         const shuffled = [...galleryItems].sort(() => 0.5 - Math.random());

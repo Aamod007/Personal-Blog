@@ -824,7 +824,7 @@ export default function Bucket({ trailImages }: { trailImages?: string[] }) {
         <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
           {trailImages && trailImages.length > 0 && (
             <div className="absolute inset-0">
-              <ImageTrail items={trailImages} variant={3} />
+              <ImageTrail items={trailImages} variant={1} />
             </div>
           )}
           <div

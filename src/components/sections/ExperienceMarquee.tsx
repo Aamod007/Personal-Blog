@@ -171,7 +171,7 @@ export default function ExperienceMarquee() {
     const bottomIds = ["vol-1", "vol-2", "vol-3", "vol-4", "vol-5", "vol-6", "vol-7"];
 
     const allIds = [...topIds, ...bottomIds];
-    
+
     // Filter out items that use the user's photo and ensure unique logos
     const uniqueLogos = new Set<string>();
     const validExperiences = experiences.filter((exp: Experience) => {

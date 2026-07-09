@@ -88,19 +88,19 @@ class ImageTrailVariant1 {
       const rect = this.container.getBoundingClientRect();
       this.mousePos = getLocalPointerPos(ev, rect);
     };
-    container.addEventListener('mousemove', handlePointerMove);
-    container.addEventListener('touchmove', handlePointerMove);
+    window.addEventListener('mousemove', handlePointerMove);
+    window.addEventListener('touchmove', handlePointerMove);
 
     const initRender = (ev: MouseEvent | TouchEvent) => {
       const rect = this.container.getBoundingClientRect();
       this.mousePos = getLocalPointerPos(ev, rect);
       this.cacheMousePos = { ...this.mousePos };
       requestAnimationFrame(() => this.render());
-      container.removeEventListener('mousemove', initRender as EventListener);
-      container.removeEventListener('touchmove', initRender as EventListener);
+      window.removeEventListener('mousemove', initRender as EventListener);
+      window.removeEventListener('touchmove', initRender as EventListener);
     };
-    container.addEventListener('mousemove', initRender as EventListener);
-    container.addEventListener('touchmove', initRender as EventListener);
+    window.addEventListener('mousemove', initRender as EventListener);
+    window.addEventListener('touchmove', initRender as EventListener);
   }
 
   private render() {
@@ -133,14 +133,16 @@ class ImageTrailVariant1 {
         img.DOM.el,
         {
           opacity: 1,
-          scale: 1,
+          scale: 0.2,
           zIndex: this.zIndexVal,
           x: this.cacheMousePos.x - (img.rect?.width ?? 0) / 2,
           y: this.cacheMousePos.y - (img.rect?.height ?? 0) / 2
         },
         {
-          duration: 0.4,
-          ease: 'power1',
+          duration: 1.5,
+          ease: 'back.out(1.5)',
+          opacity: 1,
+          scale: 1,
           x: this.mousePos.x - (img.rect?.width ?? 0) / 2,
           y: this.mousePos.y - (img.rect?.height ?? 0) / 2
         },
@@ -149,12 +151,12 @@ class ImageTrailVariant1 {
       .to(
         img.DOM.el,
         {
-          duration: 0.4,
-          ease: 'power3',
+          duration: 2.5,
+          ease: 'power2.inOut',
           opacity: 0,
-          scale: 0.2
+          scale: 0.5
         },
-        0.4
+        2.0
       );
   }
 
@@ -1214,15 +1216,15 @@ export default function ImageTrail({ items = [], variant = 1 }: ImageTrailProps)
   }, [variant, items]);
 
   return (
-    <div className="w-full h-full relative z-0 rounded-lg bg-transparent overflow-visible pointer-events-auto" ref={containerRef}>
+    <div className="w-full h-full relative z-0 rounded-lg bg-transparent overflow-visible pointer-events-none" ref={containerRef}>
       {items.map((url, i) => (
         <div
-          className="content__img w-[190px] aspect-[1.1] rounded-[15px] absolute top-0 left-0 opacity-0 overflow-hidden [will-change:transform,filter]"
+          className="content__img w-[190px] aspect-[1.1] rounded-[15px] absolute top-0 left-0 opacity-0 overflow-hidden [will-change:transform,filter] pointer-events-none"
           key={i}
         >
           <div
             className="content__img-inner bg-center bg-cover w-[calc(100%+20px)] h-[calc(100%+20px)] absolute top-[-10px] left-[-10px]"
-            style={{ backgroundImage: `url(${url})` }}
+            style={{ backgroundImage: `url("${url}")` }}
           />
         </div>
       ))}

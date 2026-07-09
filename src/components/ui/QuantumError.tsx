@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { Home, MoveLeft, RefreshCcw } from 'lucide-react';
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { usePerformance } from '@/hooks/usePerformance';
 
 interface QuantumErrorProps {
@@ -12,6 +12,7 @@ interface QuantumErrorProps {
 }
 
 export function QuantumError({ type = '404', reset }: QuantumErrorProps) {
+    const router = useRouter();
     const { isLowPowerMode } = usePerformance();
     const mouseX = useMotionValue(0);
     const mouseY = useMotionValue(0);
@@ -54,15 +55,13 @@ export function QuantumError({ type = '404', reset }: QuantumErrorProps) {
         : "An internal technical error has occurred.";
 
     const formattedDate = currentTime.toLocaleDateString('en-IN', {
-        timeZone: 'Asia/Kolkata',
         weekday: 'long',
         year: 'numeric',
         month: 'long',
         day: 'numeric'
-    }).toUpperCase();
+    });
 
     const formattedTime = currentTime.toLocaleTimeString('en-IN', {
-        timeZone: 'Asia/Kolkata',
         hour: '2-digit',
         minute: '2-digit',
         second: '2-digit',
@@ -125,15 +124,13 @@ export function QuantumError({ type = '404', reset }: QuantumErrorProps) {
                     transition={{ delay: 0.4 }}
                     className="flex flex-col sm:flex-row items-center gap-6 mt-16"
                 >
-                    <Link href="/">
-                        <button className="group relative flex items-center gap-3 px-8 py-4 rounded-full bg-foreground text-background font-bold text-sm tracking-wide transition-all hover:pr-10">
-                            <Home size={18} />
-                            <span>Return Home</span>
-                            <div className="absolute right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                                <MoveLeft size={16} className="rotate-180" />
-                            </div>
-                        </button>
-                    </Link>
+                    <button onClick={() => router.push('/')} className="group relative flex items-center gap-3 px-8 py-4 rounded-full bg-foreground text-background font-bold text-sm tracking-wide transition-all hover:pr-10">
+                        <Home size={18} />
+                        <span>Return Home</span>
+                        <div className="absolute right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <MoveLeft size={16} className="rotate-180" />
+                        </div>
+                    </button>
 
                     {reset ? (
                         <button
@@ -145,7 +142,7 @@ export function QuantumError({ type = '404', reset }: QuantumErrorProps) {
                         </button>
                     ) : (
                         <button
-                            onClick={() => window.history.back()}
+                            onClick={() => router.back()}
                             className="flex items-center gap-3 text-muted-foreground hover:text-foreground font-bold text-sm tracking-wide transition-colors"
                         >
                             <MoveLeft size={18} />
@@ -159,7 +156,7 @@ export function QuantumError({ type = '404', reset }: QuantumErrorProps) {
             <div className="absolute bottom-12 left-12 z-20 hidden md:block">
                 <div className="flex flex-col font-mono text-left select-none">
                     <div className="flex items-center gap-2 text-primary font-black text-[11px] tracking-[0.2em] uppercase mb-1 opacity-80">
-                        <span>Uttar Pradesh, INDIA</span>
+                        <span>UTTAR PRADESH, INDIA</span>
                     </div>
                     <div className="text-[10px] font-black uppercase tracking-[0.1em] text-foreground/40 mb-2">
                         {formattedDate}

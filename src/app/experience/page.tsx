@@ -502,7 +502,7 @@ function CollapsibleExperienceCard({ exp, idx, isLowPowerMode }: { exp: Experien
                             {exp.type && (
                                 <>
                                     <span className="w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-700" />
-                                    <span className="capitalize">{t(`type.${exp.type.toLowerCase()}`)}</span>
+                                    <span className="capitalize">{t(`type.${exp.type}`)}</span>
                                 </>
                             )}
                             {exp.location && (
@@ -628,19 +628,21 @@ const slugify = (text: string) => {
 };
 
 const LinkPreviewCard = ({ url, title, id, logo }: { url: string; title?: string; id: string; logo?: string }) => {
+    const isInternal = url.startsWith('/');
     const domain = useMemo(() => {
         try {
+            if (isInternal) return '404 - Error';
             return new URL(url).hostname;
         } catch {
             return 'external-link.com';
         }
-    }, [url]);
+    }, [url, isInternal]);
 
     return (
         <motion.a
             href={url}
-            target="_blank"
-            rel="noopener noreferrer"
+            target={isInternal ? "_self" : "_blank"}
+            rel={isInternal ? "" : "noopener noreferrer"}
             layoutId={`${id}-link-card`}
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
