@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { cn } from "@/lib/utils";
 import React, { useState, useEffect, useRef } from "react";
@@ -354,7 +354,7 @@ export const GitHubShowcase = () => {
           onClick={(e) => { e.stopPropagation(); setIsExpanded(!isExpanded); }}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className="absolute top-8 right-8 z-50 p-4 bg-black dark:bg-white text-white dark:text-black rounded-full shadow-2xl"
+          className="absolute top-8 right-8 z-50 p-4 bg-[#39d353] text-black rounded-full shadow-2xl"
         >
           {isExpanded ? <Minimize2 size={24} /> : <Maximize2 size={24} />}
         </motion.button>
@@ -425,7 +425,7 @@ export const GitHubShowcase = () => {
                   onClick={() => setIsExpanded(false)}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
-                  className="absolute top-8 right-8 z-50 p-4 bg-black dark:bg-white text-white dark:text-black rounded-full shadow-2xl"
+                  className="absolute top-8 right-8 z-50 p-4 bg-[#39d353] text-black rounded-full shadow-2xl"
                 >
                   <Minimize2 size={24} />
                 </motion.button>

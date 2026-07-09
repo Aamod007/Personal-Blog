@@ -24,34 +24,14 @@ import { IdentitySequence } from "./IdentitySequence";
 import ScrollAdventure from "@/components/ui/animated-scroll";
 import Bucket from "@/components/ui/bucket";
 import { ArgentLoopInfiniteSlider } from "@/components/ui/argent-loop-infinite-slider";
-import { HorizontalTimeline } from "@/components/ui/horizontal-timeline";
+
 import { CertificateShowcase } from "@/components/ui/certificate-marquee";
 import { GitHubShowcase } from "@/components/ui/github-showcase";
 import KaggleShowcase from "@/components/ui/kaggle-showcase";
-import { WakaTimeShowcase } from "@/components/ui/wakatime-showcase";
+import { LeetCodeShowcase } from "@/components/ui/leetcode-showcase";
 import { ShowcaseStack } from "@/components/ui/showcase-stack";
 
-const showcaseMembers = [
-    ...portfolioData.experiences
-        .filter(exp => ['vol-6', 'prof-1', 'cert-1', 'lead-2', 'vol-5'].includes(exp.id))
-        .map(exp => ({
-        id: exp.id,
-        name: exp.company,
-        role: exp.position,
-        description: exp.description,
-        period: exp.startDate + (exp.endDate ? ` - ${exp.endDate}` : ' - Present'),
-        image: exp.logo,
-        social: exp.externalLink ? { website: exp.externalLink } : undefined
-    })),
-    // View more
-    {
-        id: 'view-more',
-        name: 'View more',
-        role: 'Explore all experiences',
-        image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1964&auto=format&fit=crop',
-        social: { website: '/experience' }
-    }
-];
+
 
 const GALLERY_IMAGES = [
     "/gallery/hackathon-event.jpeg",
@@ -523,7 +503,7 @@ const ScrollHijackSection = () => {
     );
 };
 
-export default function AboutSection() { console.log('SHOWCASE MEMBERS:', showcaseMembers.map(m => m.id));
+export default function AboutSection() {
     const containerRef = useRef<HTMLElement>(null);
     const { scrollYProgress } = useScroll({
         target: containerRef,
@@ -573,65 +553,7 @@ export default function AboutSection() { console.log('SHOWCASE MEMBERS:', showca
                         >
                             <div className="mb-6 md:mb-10 text-center space-y-4">
                             </div>
-                            <div className="w-full pb-0">
-                                <HorizontalTimeline data={showcaseMembers.map((member) => ({
-                                    title: member.id === 'view-more' ? 'Explore all experiences' : (member.role || member.name),
-                                    isEnd: member.id === 'view-more',
-                                    period: 'period' in member ? member.period : undefined,
-                                    content: member.id === 'view-more' ? (
-                                        <div className="relative flex items-center h-[140px] w-[200px]">
-                                            <div className="absolute left-6 transition-all duration-500 opacity-100 group-hover:opacity-0 group-hover:scale-50 z-20">
-                                                <div className="p-4 rounded-full bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 shadow-sm flex items-center justify-center">
-                                                    <ArrowUpRight className="w-8 h-8 text-neutral-600 dark:text-neutral-400" />
-                                                </div>
-                                            </div>
-                                            <Link
-                                                href={member.social?.website || '/experience'}
-                                                className="absolute left-0 flex flex-col items-center justify-center p-6 bg-white/40 dark:bg-black/30 border border-white/60 dark:border-white/10 rounded-2xl backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] w-[200px] h-[140px] opacity-0 scale-95 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto transition-all duration-500 z-30 group/btn hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:border-white/80 dark:hover:border-white/20 hover:bg-white/50 dark:hover:bg-black/40"
-                                            >
-                                                <span className="text-base font-bold text-center text-neutral-900 dark:text-white drop-shadow-sm">
-                                                    Explore all experiences
-                                                </span>
-                                            </Link>
-                                        </div>
-                                    ) : (
-                                        <div className="flex flex-col gap-4 w-[320px] md:w-[400px] border border-neutral-200 dark:border-neutral-800 p-6 rounded-2xl bg-white/80 dark:bg-neutral-950/80 backdrop-blur-md shadow-xl mt-4">
-                                            <div className="flex flex-col gap-2">
-                                                <div className="flex flex-row items-center justify-between">
-                                                    <h4 className="text-lg font-bold text-neutral-900 dark:text-white leading-tight">
-                                                        {member.name}
-                                                    </h4>
-                                                </div>
-                                            </div>
 
-                                            {'description' in member && member.description && (
-                                                <p className="text-sm font-normal text-neutral-600 dark:text-neutral-400 leading-relaxed mt-1 line-clamp-3" title={member.description}>
-                                                    {member.description}
-                                                </p>
-                                            )}
-
-                                            <div className="w-full mt-4 rounded-xl border border-neutral-200 dark:border-neutral-800 overflow-hidden relative group/card h-32">
-                                                {member.image?.split('?')[0].endsWith('.pdf') ? (
-                                                    <iframe src={member.image} className="w-full h-full border-none object-cover opacity-90 group-hover/card:opacity-100 transition-opacity duration-500 group-hover/card:scale-105 pointer-events-none" />
-                                                ) : (
-                                                    <img
-                                                        src={member.image}
-                                                        alt={member.name}
-                                                        className="w-full h-full object-cover opacity-90 group-hover/card:opacity-100 transition-opacity duration-500 group-hover/card:scale-105"
-                                                    />
-                                                )}
-                                                {member.social?.website && (
-                                                    <div className="absolute inset-0 bg-black/50 opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
-                                                        <Link href={member.social.website} target="_blank" className="px-5 py-2.5 bg-white text-black text-xs font-bold rounded-full hover:scale-105 transition-transform">
-                                                            View Details
-                                                        </Link>
-                                                    </div>
-                                                )}
-                                            </div>
-                                        </div>
-                                    )
-                                }))} />
-                            </div>
                         </motion.div>
 
                         {/* Certificate Showcase Section */}
@@ -647,8 +569,8 @@ export default function AboutSection() { console.log('SHOWCASE MEMBERS:', showca
                             <div className="w-full">
                                 <KaggleShowcase />
                             </div>
-                            <div className="w-full">
-                                <WakaTimeShowcase />
+                            <div className="w-full mt-12 mb-32 relative z-10 px-4 md:px-0">
+                                <LeetCodeShowcase />
                             </div>
                         </ShowcaseStack>
                     </div>
