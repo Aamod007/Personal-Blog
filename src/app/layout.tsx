@@ -1,4 +1,4 @@
-﻿import type { Metadata, Viewport } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter, JetBrains_Mono, Playfair_Display, Alex_Brush } from 'next/font/google';
 import { getMessages, getLocale } from 'next-intl/server';
 import { ThemeProvider, I18nProvider, SmoothScrollProvider } from '@/providers';
@@ -66,10 +66,7 @@ export const metadata: Metadata = {
         },
     },
     icons: {
-        icon: [
-            { url: '/Aamod007_light.svg', media: '(prefers-color-scheme: light)' },
-            { url: '/Aamod007_dark.svg', media: '(prefers-color-scheme: dark)' },
-        ],
+        icon: '/about/A.jpg',
     },
 };
 
