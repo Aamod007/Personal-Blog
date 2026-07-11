@@ -107,15 +107,15 @@ export function ViewTracker() {
             {/* Main Button */}
             <motion.button
                 className={cn(
-                    "flex items-center gap-2 md:gap-3 px-3 py-2 md:px-4 md:py-2.5 rounded-full border transition-colors",
+                    "flex items-center gap-2 md:gap-3 px-3 py-2 md:px-4 md:py-2.5 rounded-full border transition-colors group",
                     isDark ? "bg-[#161616] border-white/10 hover:bg-[#1f1f1f] hover:border-white/20" : "bg-white border-black/10 hover:bg-black/[0.02] hover:border-black/20"
                 )}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => setIsOpen(!isOpen)}
             >
-                <Bot className="w-4 h-4 md:w-5 md:h-5 text-foreground" />
-                <span className="text-xs md:text-sm font-bold tracking-widest font-mono">
+                <Bot className="w-4 h-4 md:w-5 md:h-5 text-muted-foreground transition-all duration-300 group-hover:text-foreground group-hover:scale-125 group-hover:rotate-12" />
+                <span className="text-xs md:text-sm font-bold tracking-widest font-mono text-muted-foreground transition-colors duration-300 group-hover:text-foreground">
                     <motion.span>{displayTotal}</motion.span> VIEWS
                 </span>
             </motion.button>
@@ -142,14 +142,9 @@ export function ViewTracker() {
                                 )}>
                                     TRAFFIC INSIGHTS
                                 </h4>
-                                <p className="text-[10px] font-mono tracking-widest text-muted-foreground/60 uppercase">
-                                    UPSTASH_REDIS_CACHED
-                                </p>
                             </div>
                             <div className="w-2 h-2 rounded-full bg-emerald-500/80 shadow-[0_0_8px_rgba(16,185,129,0.5)] animate-pulse" />
                         </div>
-                        
-                        <div className="h-[1px] w-full bg-border/50 mb-6" />
 
                         {/* Stats List - Bento Style */}
                         <div className="grid grid-cols-2 gap-3">
