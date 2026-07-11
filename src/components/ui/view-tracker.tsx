@@ -1,26 +1,32 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useMotionValue, animate, useTransform } from 'framer-motion';
 import { Bot, BarChart2, Users, Eye, Activity } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export function ViewTracker() {
     const [isOpen, setIsOpen] = useState(false);
-    const [views, setViews] = useState({
-        total: '...',
-        unique: '...',
-    });
+    const countTotal = useMotionValue(0);
+    const countUnique = useMotionValue(0);
+    const [isLoaded, setIsLoaded] = useState(false);
+
+    const displayTotal = useTransform(countTotal, (latest) => 
+        isLoaded ? Math.round(latest).toLocaleString() : '...'
+    );
+    const displayUnique = useTransform(countUnique, (latest) => 
+        isLoaded ? Math.round(latest).toLocaleString() : '...'
+    );
+
     useEffect(() => {
         // Track the visit on component mount
         fetch('/api/views', { method: 'POST' })
             .then(res => res.json())
             .then(data => {
                 if (data.total !== undefined && data.unique !== undefined) {
-                    setViews({
-                        total: data.total.toLocaleString(),
-                        unique: data.unique.toLocaleString()
-                    });
+                    setIsLoaded(true);
+                    animate(countTotal, data.total, { duration: 2, ease: "easeOut" });
+                    animate(countUnique, data.unique, { duration: 2, ease: "easeOut" });
                 }
             })
             .catch(console.error);
@@ -41,7 +47,7 @@ export function ViewTracker() {
             >
                 <Bot className="w-4 h-4 md:w-5 md:h-5 text-foreground" />
                 <span className="text-xs md:text-sm font-bold tracking-widest font-mono">
-                    {views.total} VIEWS
+                    <motion.span>{displayTotal}</motion.span> VIEWS
                 </span>
             </motion.button>
 
@@ -97,7 +103,7 @@ export function ViewTracker() {
                                         Unique Visitors
                                     </p>
                                     <p className="text-sm font-black text-foreground tracking-widest">
-                                        {views.unique}
+                                        <motion.span>{displayUnique}</motion.span>
                                     </p>
                                 </div>
                             </div>
@@ -112,7 +118,7 @@ export function ViewTracker() {
                                         Total Views
                                     </p>
                                     <p className="text-sm font-black text-foreground tracking-widest">
-                                        {views.total}
+                                        <motion.span>{displayTotal}</motion.span>
                                     </p>
                                 </div>
                             </div>
