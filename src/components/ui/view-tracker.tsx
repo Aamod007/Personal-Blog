@@ -8,8 +8,8 @@ import { cn } from '@/lib/utils';
 export function ViewTracker() {
     const [isOpen, setIsOpen] = useState(false);
     const [views, setViews] = useState({
-        total: '6,040',
-        unique: '4,255',
+        total: '...',
+        unique: '...',
     });
     useEffect(() => {
         // Track the visit on component mount
