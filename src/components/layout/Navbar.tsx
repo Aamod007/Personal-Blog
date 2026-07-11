@@ -11,6 +11,7 @@ import { cn } from '@/lib/utils';
 
 import CardNav from '@/components/ui/CardNav';
 import { AnimatedThemeToggler } from '@/components/ui/animated-theme-toggler';
+import { ViewTracker } from '@/components/ui/view-tracker';
 
 function Clock() {
     const [time, setTime] = useState<string>('');
@@ -206,16 +207,7 @@ export function Navbar() {
                         {/* Controls */}
                         <div className="flex items-center gap-2 md:gap-3">
 
-
-                            <motion.button
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                                onClick={toggleLocale}
-                                className="p-2 md:p-2.5 rounded-full bg-muted/80 hover:bg-muted transition-colors"
-                                aria-label="Toggle language"
-                            >
-                                <Globe className="w-4 h-4" />
-                            </motion.button>
+                            <ViewTracker />
 
                             {mounted && (
                                 <AnimatedThemeToggler />
