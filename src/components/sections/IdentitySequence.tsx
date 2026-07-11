@@ -66,11 +66,11 @@ export const IdentitySequence = ({ scrollYProgress, isVisible }: IdentitySequenc
     });
 
     const marqueeItems = [
-        <span key="1" className="text-[10rem] md:text-[16rem] font-black uppercase tracking-tighter mx-12 text-black dark:text-white leading-none">
+        <span key="1" className="text-[4rem] sm:text-[6rem] md:text-[10rem] lg:text-[16rem] font-black uppercase tracking-tighter mx-4 sm:mx-8 md:mx-12 text-black dark:text-white leading-none">
             {portfolioData.personal.title}
         </span>,
-        <div key="icon" className="w-32 h-32 md:w-48 md:h-48 rounded-full bg-[#D1FF4D] flex items-center justify-center mx-12">
-            <svg viewBox="0 0 100 100" className="w-20 h-20 md:w-32 md:h-32 fill-black dark:fill-zinc-900">
+        <div key="icon" className="w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-48 lg:h-48 rounded-full bg-[#D1FF4D] flex items-center justify-center mx-4 sm:mx-8 md:mx-12">
+            <svg viewBox="0 0 100 100" className="w-10 h-10 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-32 lg:h-32 fill-black dark:fill-zinc-900">
                 <path d="M50 0 C60 30 100 40 100 50 C100 60 60 70 50 100 C40 70 0 60 0 50 C0 40 40 30 50 0" />
             </svg>
         </div>
@@ -87,20 +87,20 @@ export const IdentitySequence = ({ scrollYProgress, isVisible }: IdentitySequenc
                 <div className="mb-16 pointer-events-auto">
                     <MagneticEffect>
                         <div className="group flex items-center gap-2 cursor-pointer">
-                            <div className="relative px-10 py-5 rounded-full bg-black dark:bg-white group-hover:bg-[#c1e44a] dark:group-hover:bg-[#c1e44a] overflow-hidden transition-all duration-500 shadow-lg group-hover:shadow-[0_0_30px_rgba(193,228,74,0.3)]">
+                            <div className="relative px-6 sm:px-10 py-4 sm:py-5 rounded-full bg-black dark:bg-white group-hover:bg-[#c1e44a] dark:group-hover:bg-[#c1e44a] overflow-hidden transition-all duration-500 shadow-lg group-hover:shadow-[0_0_30px_rgba(193,228,74,0.3)]">
                                 <div className="relative z-10 h-7 overflow-hidden">
                                     <div className="flex flex-col transition-transform duration-500 ease-out group-hover:-translate-y-1/2">
-                                        <span className="text-white dark:text-black group-hover:text-black font-bold text-xl leading-7 transition-colors duration-500">
+                                        <span className="text-white dark:text-black group-hover:text-black font-bold text-base sm:text-xl leading-7 transition-colors duration-500">
                                             {t("leadIn.aboutMe")}
                                         </span>
-                                        <span className="text-black font-bold text-xl leading-7 transition-colors duration-500">
+                                        <span className="text-black font-bold text-base sm:text-xl leading-7 transition-colors duration-500">
                                             {t("leadIn.aboutMe")}
                                         </span>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="relative w-16 h-16 rounded-full bg-black dark:bg-white group-hover:bg-[#c1e44a] dark:group-hover:bg-[#c1e44a] overflow-hidden flex items-center justify-center transition-all duration-500 shadow-lg">
+                            <div className="relative w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-black dark:bg-white group-hover:bg-[#c1e44a] dark:group-hover:bg-[#c1e44a] overflow-hidden flex items-center justify-center transition-all duration-500 shadow-lg">
                                 <div className="relative z-10 h-8 overflow-hidden">
                                     <div className="flex flex-col transition-transform duration-500 ease-out group-hover:-translate-y-1/2">
                                         <ArrowUpRight className="w-8 h-8 text-white dark:text-black group-hover:text-black transition-colors duration-500" />
@@ -113,8 +113,8 @@ export const IdentitySequence = ({ scrollYProgress, isVisible }: IdentitySequenc
                 </div>
 
                 {/* Unified Bottom Labels Layer */}
-                <div className="w-full max-w-[1200px] flex items-center justify-between px-12">
-                    <div className="flex items-center gap-3 text-zinc-500 dark:text-white/60 text-sm font-medium tracking-tight">
+                <div className="w-full max-w-[1200px] flex items-center justify-between px-4 sm:px-8 md:px-12">
+                    <div className="flex items-center gap-3 text-zinc-500 dark:text-white/60 text-xs sm:text-sm font-medium tracking-tight">
                         <motion.span
                             animate={{ y: [0, 5, 0] }}
                             transition={{ duration: 1.5, repeat: Infinity }}
@@ -125,7 +125,7 @@ export const IdentitySequence = ({ scrollYProgress, isVisible }: IdentitySequenc
                         <span>{t("leadIn.scroll")}</span>
                     </div>
 
-                    <div className="text-zinc-500 dark:text-white/60 text-sm font-medium tracking-tight">
+                    <div className="text-zinc-500 dark:text-white/60 text-xs sm:text-sm font-medium tracking-tight">
                         {t("leadIn.shortStory")}
                     </div>
                 </div>
@@ -187,7 +187,7 @@ export const IdentitySequence = ({ scrollYProgress, isVisible }: IdentitySequenc
                                                 style={{ y: imageParallaxY }}
                                             >
                                                 <Image
-                                                    src="/gallery/WhatsApp Image 2026-07-09 at 11.23.47 AM.jpeg"
+                                                    src="/experience/WhatsApp Image 2026-07-09 at 11.23.47 AM.jpeg"
                                                     alt="Profile"
                                                     fill
                                                     className="object-cover object-bottom grayscale-0"

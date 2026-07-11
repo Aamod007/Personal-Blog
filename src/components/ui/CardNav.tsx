@@ -15,6 +15,7 @@ interface NavLink {
 interface NavItem {
     label: string;
     links: NavLink[];
+    href?: string;
 }
 
 interface CardNavProps {

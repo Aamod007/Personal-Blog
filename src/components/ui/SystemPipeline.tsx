@@ -98,7 +98,7 @@ export const SystemPipeline = ({ tools, className }: SystemPipelineProps) => {
 
                             {/* "Phantom" Decoration Node (Precedes actual nodes) */}
                             {idx % 2 === 0 && (
-                                <div className="hidden lg:flex flex-col items-center opacity-10 blur-[1px] -translate-y-24">
+                                <div className="flex flex-col items-center opacity-10 blur-[1px] -translate-y-24 scale-50 lg:scale-100 origin-bottom">
                                     <div className="w-48 h-48 border border-white/20 rounded-full flex items-center justify-center">
                                         <Boxes size={32} />
                                     </div>
@@ -159,7 +159,7 @@ export const SystemPipeline = ({ tools, className }: SystemPipelineProps) => {
 
                             {/* Enhanced Pipe Joiner */}
                             {idx < tools.length - 1 && (
-                                <div className="hidden md:flex items-center justify-center w-32 relative">
+                                <div className="flex items-center justify-center w-16 md:w-32 relative">
                                     <div className="w-6 h-6 rounded-full border border-primary/40 bg-background flex items-center justify-center relative shadow-[0_0_20px_rgba(var(--primary-rgb),0.2)]">
                                         <Activity size={10} className="text-primary" />
                                         <motion.div
@@ -181,14 +181,14 @@ export const SystemPipeline = ({ tools, className }: SystemPipelineProps) => {
                 </motion.div>
 
                 {/* Professional Overlay UI */}
-                <div className="absolute top-12 left-1/2 -translate-x-1/2 flex items-center gap-12 text-primary/20 font-black text-[10px] tracking-[1em] uppercase overflow-hidden whitespace-nowrap hidden lg:flex">
+                <div className="absolute top-12 left-1/2 -translate-x-1/2 flex items-center gap-12 text-primary/20 font-black text-[10px] tracking-[1em] uppercase overflow-hidden whitespace-nowrap scale-50 lg:scale-100">
                     <span>SYSTEM_GRID_ARCHITECTURE</span>
                     <div className="w-32 h-[1px] bg-primary/20" />
                     <span>KERNEL_RESOURCES_V8</span>
                 </div>
 
                 {/* Bottom Left: Logic Logs */}
-                <div className="absolute bottom-12 left-12 p-8 border border-primary/20 bg-black/80 rounded-[2rem] w-80 hidden lg:block z-20 shadow-2xl transform-gpu">
+                <div className="absolute bottom-12 left-12 p-8 border border-primary/20 bg-black/80 rounded-[2rem] w-80 block scale-50 lg:scale-100 origin-bottom-left z-20 shadow-2xl transform-gpu">
                     <div className="flex items-center justify-between mb-6 border-b border-primary/10 pb-4">
                         <div className="flex items-center gap-3 text-[10px] font-black uppercase tracking-widest text-primary">
                             <Cpu size={14} /> Process_Console
@@ -206,7 +206,7 @@ export const SystemPipeline = ({ tools, className }: SystemPipelineProps) => {
                 </div>
 
                 {/* Right: Scroll Meta */}
-                <div className="absolute right-12 top-1/2 -translate-y-1/2 flex flex-col items-center gap-8 hidden lg:flex">
+                <div className="absolute right-12 top-1/2 -translate-y-1/2 flex flex-col items-center gap-8 scale-50 lg:scale-100 origin-right">
                     <div className="h-64 w-[1px] bg-white/5 relative">
                         <motion.div
                             className="absolute top-0 left-0 w-full bg-primary"

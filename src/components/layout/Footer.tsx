@@ -323,7 +323,7 @@ export function Footer() {
                                     </div>
 
                                     {/* Main Grid - Forced 4-column layout regardless of zoom/screen */}
-                                    <div className="w-full grid grid-cols-4 gap-x-[5vw] gap-y-[4vh]">
+                                    <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-[5vw] gap-y-[4vh]">
                                         <FooterColumn title={t('links')}>
                                             <FooterLink href="/">{tNav('home')}</FooterLink>
                                             <FooterLink href="/resume">{tNav('resume')}</FooterLink>
@@ -369,7 +369,7 @@ export function Footer() {
                                         </FooterColumn>
 
                                         <FooterColumn title={t('localTime')}>
-                                            <p className="text-zinc-900 dark:text-white text-[1.2vw] min-text-[14px] font-medium tracking-tight">
+                                            <p className="text-zinc-900 dark:text-white text-base lg:text-[clamp(14px,1.2vw,18px)] font-medium tracking-tight">
                                                 {localTime}
                                             </p>
                                             <a
@@ -383,7 +383,7 @@ export function Footer() {
                                         </FooterColumn>
 
                                         <FooterColumn title={t('version')}>
-                                            <p className="text-zinc-900 dark:text-white text-[1.2vw] min-text-[14px] font-medium tracking-tight">
+                                            <p className="text-zinc-900 dark:text-white text-base lg:text-[clamp(14px,1.2vw,18px)] font-medium tracking-tight">
                                                 {t('versionEdition')}
                                             </p>
                                         </FooterColumn>
@@ -396,7 +396,7 @@ export function Footer() {
                                         initial={{ opacity: 0, y: "100%" }}
                                         animate={isAboutExpanded ? { opacity: 0, y: "120%" } : { opacity: 1, y: "38%" }}
                                         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                                        className="text-[18vw] font-black leading-none text-zinc-900 dark:text-white tracking-tighter select-none text-center"
+                                        className="text-[15vw] sm:text-[18vw] font-black leading-none text-zinc-900 dark:text-white tracking-tighter select-none text-center"
                                     >
                                         AAMOD
                                     </motion.h2>
@@ -413,9 +413,9 @@ export function Footer() {
 
 function FooterColumn({ title, children }: { title: string; children: React.ReactNode }) {
     return (
-        <div className="flex flex-col gap-[1.5vw]">
-            <h3 className="text-zinc-500 text-[clamp(10px,0.8vw,14px)] font-bold tracking-widest uppercase">{title}</h3>
-            <div className="flex flex-col gap-[0.8vw]">
+        <div className="flex flex-col gap-3 lg:gap-[1.5vw]">
+            <h3 className="text-zinc-500 text-xs lg:text-[clamp(10px,0.8vw,14px)] font-bold tracking-widest uppercase">{title}</h3>
+            <div className="flex flex-col gap-2 lg:gap-[0.8vw]">
                 {children}
             </div>
         </div>
@@ -432,7 +432,7 @@ function FooterLink({ href, children, target }: { href: string; children: React.
                 href={href}
                 target={target}
                 rel={target === '_blank' ? 'noopener noreferrer' : undefined}
-                className="text-zinc-900 dark:text-white text-[clamp(14px,1.2vw,22px)] font-medium hover:text-zinc-500 dark:hover:text-zinc-400 transition-colors w-fit whitespace-nowrap block"
+                className="text-zinc-900 dark:text-white text-base lg:text-[clamp(14px,1.2vw,22px)] font-medium hover:text-zinc-500 dark:hover:text-zinc-400 transition-colors w-fit whitespace-nowrap block"
             >
                 {children}
             </Link>

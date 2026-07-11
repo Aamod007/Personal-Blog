@@ -51,8 +51,8 @@ export function ProfileCard(props: ProfileCardProps) {
         </button>
       )}
 
-      {/* Desktop */}
-      <div className='hidden md:flex relative items-center'>
+      {/* Desktop Layout Scaled for All Devices */}
+      <div className='flex relative items-center scale-[0.4] sm:scale-75 md:scale-100 origin-left sm:origin-center'>
         {/* Square Image */}
         <div className='w-[480px] h-[480px] rounded-[2.5rem] overflow-hidden bg-gray-200 dark:bg-gray-800 flex-shrink-0 shadow-2xl relative z-0'>
           <Image
@@ -103,55 +103,7 @@ export function ProfileCard(props: ProfileCardProps) {
         </motion.div>
       </div>
 
-      {/* Mobile */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-        className='md:hidden max-w-sm mx-auto text-center bg-white dark:bg-zinc-900 p-6 rounded-[2.5rem] shadow-2xl border border-white/5'
-      >
-        {/* Square Mobile Image */}
-        <div className='w-full aspect-square bg-gray-200 dark:bg-gray-700 rounded-3xl overflow-hidden mb-6 flex items-center justify-center'>
-          <Image
-            src={imageUrl}
-            alt={name}
-            width={400}
-            height={400}
-            className='w-full h-full object-cover'
-            draggable={false}
-            priority
-          />
-        </div>
 
-        <div className='px-4'>
-          <h2 className='text-2xl font-black text-gray-900 dark:text-white mb-2 tracking-tighter'>
-            {name}
-          </h2>
-
-          <p className='text-[10px] font-bold text-primary mb-4 uppercase tracking-widest'>
-            {title}
-          </p>
-
-          <p className='text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed mb-6'>
-            {description}
-          </p>
-
-          <div className='flex justify-center space-x-4'>
-            {socialIcons.map(({ icon: Icon, url, label }) => (
-              <Link
-                key={label}
-                href={url}
-                target='_blank'
-                rel='noopener noreferrer'
-                className='w-12 h-12 bg-gray-900 dark:bg-white rounded-full flex items-center justify-center transition-all hover:scale-110'
-                aria-label={label}
-              >
-                <Icon className='w-5 h-5 text-white dark:text-black' />
-              </Link>
-            ))}
-          </div>
-        </div>
-      </motion.div>
     </div>
   );
 }

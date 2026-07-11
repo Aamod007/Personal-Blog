@@ -169,7 +169,7 @@ export function HeroVisual({ isExiting = false }: { isExiting?: boolean }) {
           </AnimatePresence>
 
           {/* Line 1: AI & DATA */}
-          <div className="md:flex gap-8 items-center relative">
+          <div className="flex gap-4 md:gap-8 items-center relative">
             <motion.p
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -183,7 +183,7 @@ export function HeroVisual({ isExiting = false }: { isExiting?: boolean }) {
               intelligence.
             </motion.p>
             <div className="relative">
-              <div ref={githubRef} className="absolute -top-4 right-0 md:right-2 text-primary/60 hover:text-primary z-20 opacity-0">
+              <div ref={githubRef} className="absolute -top-4 right-0 md:right-2 text-primary/60 hover:text-primary z-20 opacity-0 scale-75 md:scale-100">
                 <a
                   href={personal.socialLinks.find(s => s.platform === 'GitHub')?.url}
                   target="_blank"
@@ -196,7 +196,7 @@ export function HeroVisual({ isExiting = false }: { isExiting?: boolean }) {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isExiting ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                 transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-                className="text-[clamp(3rem,11vw,13rem)] font-black leading-[0.85] tracking-tighter text-shiny will-change-transform px-4"
+                className="text-[clamp(3.5rem,11vw,13rem)] whitespace-nowrap font-black leading-[0.85] tracking-tighter text-shiny will-change-transform px-4"
               >
                 AI & DATA
               </motion.h1>
@@ -204,9 +204,9 @@ export function HeroVisual({ isExiting = false }: { isExiting?: boolean }) {
           </div>
 
           {/* Line 2: SOFT [ICON] WARE */}
-          <div className="md:flex gap-8 items-center relative">
+          <div className="flex gap-4 md:gap-8 items-center relative">
             <div className="relative">
-              <div ref={linkedinRef} className="absolute -top-8 left-4 text-primary/60 hover:text-primary z-20 opacity-0">
+              <div ref={linkedinRef} className="absolute -top-8 left-4 text-primary/60 hover:text-primary z-20 opacity-0 scale-75 md:scale-100">
                 <a
                   href={personal.socialLinks.find(s => s.platform === 'LinkedIn')?.url}
                   target="_blank"
@@ -215,7 +215,7 @@ export function HeroVisual({ isExiting = false }: { isExiting?: boolean }) {
                   <Linkedin size={32} />
                 </a>
               </div>
-              <div ref={instagramRef} className="absolute -bottom-12 right-24 md:right-36 text-primary/60 hover:text-primary z-20 opacity-0">
+              <div ref={instagramRef} className="absolute -bottom-12 right-24 md:right-36 text-primary/60 hover:text-primary z-20 opacity-0 scale-75 md:scale-100">
                 <a
                   href={personal.socialLinks.find(s => s.platform === 'Instagram')?.url}
                   target="_blank"
@@ -228,12 +228,12 @@ export function HeroVisual({ isExiting = false }: { isExiting?: boolean }) {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isExiting ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                 transition={{ duration: 1.2, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="text-[clamp(3rem,11vw,13rem)] md:flex items-center font-black leading-[0.85] tracking-tighter text-shiny will-change-transform px-4"
+                className="text-[clamp(3.5rem,11vw,13rem)] whitespace-nowrap flex flex-wrap md:flex-nowrap items-center font-black leading-[0.85] tracking-tighter text-shiny will-change-transform px-4"
               >
                 <span className="">SOFT</span>
-                <div 
-                  ref={zapRef} 
-                  className="hidden lg:block mx-[0.05em] relative cursor-pointer group"
+                <div
+                  ref={zapRef}
+                  className="mx-[0.05em] relative cursor-pointer group scale-75 md:scale-100"
                   onClick={() => alert('Workspace is currently under construction! 🚧')}
                   onMouseEnter={(e) => setTooltip({ show: true, text: "Workspace (Under Construction)", icon: 'zap', x: e.clientX, y: e.clientY })}
                   onMouseMove={(e) => setTooltip(prev => ({ ...prev, x: e.clientX, y: e.clientY }))}
@@ -241,32 +241,22 @@ export function HeroVisual({ isExiting = false }: { isExiting?: boolean }) {
                 >
                   <Zap className="w-[0.8em] h-[0.8em] text-sky-400 group-hover:text-sky-300 transition-colors" strokeWidth={1.5} />
                 </div>
-                <div 
-                  ref={zapSmallRef} 
-                  className="block lg:hidden mx-[0.02em] relative cursor-pointer group"
-                  onClick={() => alert('Workspace is currently under construction! 🚧')}
-                  onMouseEnter={(e) => setTooltip({ show: true, text: "Workspace (Under Construction)", icon: 'zap', x: e.clientX, y: e.clientY })}
-                  onMouseMove={(e) => setTooltip(prev => ({ ...prev, x: e.clientX, y: e.clientY }))}
-                  onMouseLeave={() => setTooltip(prev => ({ ...prev, show: false }))}
-                >
-                  <Zap className="w-[0.8em] h-[0.8em] text-sky-400 group-hover:text-sky-300 transition-colors" strokeWidth={2} />
-                </div>
                 <span className="">WARE</span>
               </motion.h1>
             </div>
           </div>
 
           {/* Line 3: EN [ICON] GINEER */}
-          <div className="md:flex gap-8 items-center relative">
+          <div className="flex gap-4 md:gap-8 items-center relative">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={isExiting ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="text-[clamp(3rem,11vw,13rem)] md:flex items-center font-black leading-[0.85] tracking-tighter text-shiny will-change-transform px-4"
+              className="text-[clamp(3.5rem,11vw,13rem)] whitespace-nowrap flex flex-wrap md:flex-nowrap items-center font-black leading-[0.85] tracking-tighter text-shiny will-change-transform px-4"
             >
               <span className="">EN</span>
-              <div 
-                ref={botRef} 
+              <div
+                ref={botRef}
                 className="mx-[0.05em] relative cursor-pointer group"
                 onClick={(e) => {
                   const rect = e.currentTarget.getBoundingClientRect();
@@ -296,8 +286,8 @@ export function HeroVisual({ isExiting = false }: { isExiting?: boolean }) {
 
         {/* Separator Section */}
         <div className="mx-auto max-w-[105rem] w-full px-8 md:px-20 mt-12 md:mt-24">
-          <div className="flex items-center gap-6">
-            <Separator className="flex-1 h-[1px] bg-foreground/10 hidden md:block" />
+          <div className="flex items-center gap-6 scale-75 md:scale-100 origin-left">
+            <Separator className="flex-1 h-[1px] bg-foreground/10" />
             <div className="text-[10px] md:text-xs whitespace-nowrap font-bold tracking-[0.3em] text-muted-foreground uppercase">
               UTTAR PRADESH, IN — 2026
             </div>
@@ -323,7 +313,7 @@ export function HeroVisual({ isExiting = false }: { isExiting?: boolean }) {
 
         {/* Award/Badge Vertical - MOVED TO LEFT */}
         <div
-          className="absolute left-0 top-1/2 z-50 hidden md:flex items-center transform -translate-y-1/2 group/container"
+          className="absolute left-0 top-1/2 z-50 flex items-center transform -translate-y-1/2 group/container scale-50 md:scale-100 origin-left"
           onMouseEnter={() => setShowProfile(true)}
           onMouseLeave={() => setShowProfile(false)}
         >

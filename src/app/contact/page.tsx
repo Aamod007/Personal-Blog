@@ -61,7 +61,7 @@ function SocialCard({ item }: { item: any }) {
             href={item.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative flex h-[140px] w-[280px] flex-col justify-between rounded-3xl border border-neutral-200 dark:border-white/5 bg-white dark:bg-white/[0.02] p-6 shadow-sm dark:shadow-2xl transition-all hover:bg-neutral-50 dark:hover:bg-white/5 hover:border-neutral-300 hover:scale-[1.02] hover:-translate-y-1 backdrop-blur-md overflow-hidden flex-shrink-0"
+            className="group relative flex h-[120px] sm:h-[140px] w-[240px] sm:w-[280px] flex-col justify-between rounded-3xl border border-neutral-200 dark:border-white/5 bg-white dark:bg-white/[0.02] p-4 sm:p-6 shadow-sm dark:shadow-2xl transition-all hover:bg-neutral-50 dark:hover:bg-white/5 hover:border-neutral-300 hover:scale-[1.02] hover:-translate-y-1 backdrop-blur-md overflow-hidden flex-shrink-0"
         >
             <div className="absolute -top-6 -right-6 p-6 opacity-[0.03] group-hover:opacity-10 transition-opacity transform group-hover:scale-125 duration-700">
                 <Icon className="w-40 h-40" />
@@ -97,7 +97,7 @@ const InputGroup = ({ label, name, type = "text", value, onChange, required = fa
                     onChange={onChange}
                     required={required}
                     rows={1}
-                    className="peer block w-full appearance-none border-0 border-b-2 border-foreground/20 bg-transparent py-2.5 px-0 text-xl font-medium text-foreground focus:border-foreground focus:outline-none focus:ring-0 transition-colors duration-300 resize-y min-h-[50px] max-h-[200px]"
+                    className="peer block w-full appearance-none border-0 border-b-2 border-foreground/20 bg-transparent py-2.5 px-0 text-base sm:text-xl font-medium text-foreground focus:border-foreground focus:outline-none focus:ring-0 transition-colors duration-300 resize-y min-h-[50px] max-h-[200px]"
                     placeholder=" "
                 />
             ) : (
@@ -107,7 +107,7 @@ const InputGroup = ({ label, name, type = "text", value, onChange, required = fa
                     value={value}
                     onChange={onChange}
                     required={required}
-                    className="peer block w-full appearance-none border-0 border-b-2 border-foreground/20 bg-transparent py-2.5 px-0 text-xl font-medium text-foreground focus:border-foreground focus:outline-none focus:ring-0 transition-colors duration-300"
+                    className="peer block w-full appearance-none border-0 border-b-2 border-foreground/20 bg-transparent py-2.5 px-0 text-base sm:text-xl font-medium text-foreground focus:border-foreground focus:outline-none focus:ring-0 transition-colors duration-300"
                     placeholder=" "
                 />
             )}
@@ -158,7 +158,7 @@ function ContactForm() {
         <div className="w-full relative z-20">
             {/* Typography Header - Creative & Big */}
             <div className="mb-16">
-                <h2 className="text-5xl md:text-7xl font-black tracking-tight text-foreground relative z-10">
+                <h2 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tight text-foreground relative z-10">
                     {t('hero.title')}
                 </h2>
                 <p className="text-lg text-muted-foreground mt-4 font-light max-w-md">
@@ -186,7 +186,7 @@ function ContactForm() {
                     className="group relative w-full flex items-center justify-between border-b-2 border-foreground py-8 text-left hover:bg-foreground/5 transition-colors disabled:opacity-50"
                     whileTap={{ scale: 0.98 }}
                 >
-                    <span className="text-3xl md:text-4xl font-bold tracking-tight text-foreground group-hover:pl-4 transition-all duration-300">
+                    <span className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-foreground group-hover:pl-4 transition-all duration-300">
                         {status === 'loading' ? t('form.sending') : status === 'success' ? t('form.sent') : t('form.submit')}
                     </span>
 
@@ -233,7 +233,7 @@ function FAQSection() {
         <div className="w-full max-w-6xl mx-auto py-20 px-4 md:px-8">
             <div className="flex flex-col items-center mb-16 relative z-10 text-center">
 
-                <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-4">Frequently Asked Questions</h2>
+                <h2 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter mb-4">Frequently Asked Questions</h2>
                 <div className="h-1 w-20 bg-primary/20 rounded-full" />
             </div>
 
@@ -353,7 +353,7 @@ export default function ContactPage() {
                         <DynamicScrollVelocity
                             texts={[t('hero.ticker.build'), t('hero.ticker.freelance')]}
                             velocity={20}
-                            className="text-7xl md:text-[9rem] font-black tracking-tight uppercase whitespace-nowrap"
+                            className="text-5xl sm:text-7xl md:text-[9rem] font-black tracking-tight uppercase whitespace-nowrap"
                             isLowPowerMode={isLowPowerMode}
                         />
                     </div>
@@ -365,7 +365,7 @@ export default function ContactPage() {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
 
                         {/* LEFT COLUMN: Lanyard */}
-                        <div className="col-span-1 lg:col-span-4 relative lg:sticky top-0 h-[400px] md:h-[500px] lg:h-[90vh] pointer-events-none z-20">
+                        <div className="col-span-1 lg:col-span-4 relative lg:sticky top-0 h-[300px] sm:h-[400px] md:h-[500px] lg:h-[90vh] pointer-events-none z-20">
                             {/* Anchor Slot/Bar for Lanyard */}
                             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 md:w-64 lg:w-96 h-2 bg-gradient-to-r from-transparent via-foreground/20 to-transparent blur-[2px] rounded-full z-30 mt-[-1px]" />
                             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 md:w-32 lg:w-48 h-[3px] bg-gradient-to-r from-transparent via-foreground/40 to-transparent rounded-full z-30" />

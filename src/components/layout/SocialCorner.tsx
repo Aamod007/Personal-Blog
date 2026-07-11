@@ -22,7 +22,7 @@ export const SocialCorner = ({ className, delay = 0.5 }: SocialCornerProps) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay }}
-            className={cn("hidden md:flex flex-col items-center gap-6", className)}
+            className={cn("flex flex-col items-center gap-6 scale-75 md:scale-100 origin-bottom-right", className)}
         >
             <div className="flex flex-col items-center gap-6">
                 <a href={linkedinLink} target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-foreground/5 hover:bg-foreground/10 border border-foreground/10 transition-all hover:scale-110 group">

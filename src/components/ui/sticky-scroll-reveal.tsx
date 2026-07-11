@@ -73,7 +73,7 @@ export const StickyScroll = ({
         {/* Left Content Side */}
         <div className="relative flex items-start px-2 md:px-6 w-full lg:w-3/5">
           {/* Vertical Timeline Track */}
-          <div className="absolute left-0 top-10 bottom-10 w-[1px] bg-gradient-to-b from-transparent via-primary/20 to-transparent hidden md:block">
+          <div className="absolute left-0 top-10 bottom-10 w-[1px] bg-gradient-to-b from-transparent via-primary/20 to-transparent block">
             <motion.div
               className="w-1 h-8 -ml-[1.5px] rounded-full bg-primary shadow-[0_0_15px_rgba(var(--primary),0.5)]"
               animate={{ y: activeCard * 120 }} // Approximate visual sync
@@ -129,17 +129,14 @@ export const StickyScroll = ({
                   </p>
                 </motion.div>
 
-                {/* Mobile Content Display - Visible only on small screens */}
-                <div className="mt-8 lg:hidden rounded-2xl overflow-hidden bg-card/40 border border-border/40 p-1">
-                  {item.content}
-                </div>
+                {/* End Content Display */}
               </div>
             ))}
           </div>
         </div>
 
         {/* Right Sticky Side (Desktop) */}
-        <div className="sticky top-0 hidden lg:flex h-full items-center justify-center w-2/5">
+        <div className="sticky top-0 flex h-full items-center justify-center w-2/5 scale-75 lg:scale-100 origin-right">
           <div
             className={cn(
               "h-[24rem] w-full relative overflow-hidden rounded-[2.5rem] bg-card/40 backdrop-blur-2xl border border-white/10 dark:border-white/5 shadow-[0_20px_50px_rgba(0,0,0,0.3)] transition-all duration-700 hover:scale-[1.02]",

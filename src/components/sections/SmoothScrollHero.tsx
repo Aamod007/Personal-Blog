@@ -47,7 +47,7 @@ const Hero = ({ isLowPowerMode }: { isLowPowerMode: boolean }) => {
             <div className="absolute bottom-0 left-0 right-0 h-96 bg-gradient-to-b from-transparent to-background z-20 pointer-events-none" />
 
             <motion.div
-                className="fixed bottom-6 left-1/2 -translate-x-[65%] z-50 hidden md:flex flex-col items-center gap-2 cursor-pointer pointer-events-auto"
+                className="fixed bottom-6 left-1/2 -translate-x-[65%] z-50 flex flex-col items-center gap-2 cursor-pointer pointer-events-auto scale-75 md:scale-100"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1, duration: 1 }}
@@ -123,7 +123,7 @@ const CenterImage = ({ scrollY }: { scrollY: MotionValue<number> }) => {
 
                     <p className="w-full max-w-4xl text-center text-[clamp(10px,1.2vw,14px)] font-bold text-foreground/50 dark:text-white/50 tracking-[clamp(0.1em,0.4em,0.4em)] leading-relaxed md:leading-[2.2] uppercase">
                         Merging technical precision with creative vision.
-                        <br className="hidden md:block" />
+                        <br />
                         A curated timeline of my professional journey, from foundational code to AI solutions.
                     </p>
                 </motion.div>

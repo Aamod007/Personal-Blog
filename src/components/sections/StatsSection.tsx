@@ -7,6 +7,7 @@ import { Book } from "@/components/ui/book";
 import { portfolioData } from "@/data/portfolio";
 import Link from "next/link";
 import { ArrowUpRight, BookOpen, ChevronLeft, ChevronRight } from "lucide-react";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 const CATEGORY_COLORS: Record<string, string> = {
     'applied-ai': '#9D2127', // Deep Red
@@ -22,7 +23,9 @@ export default function StatsSection({ scrollYProgress, showOnly }: { scrollYPro
     const [direction, setDirection] = useState(0);
 
     const blogs = portfolioData.blogs.slice(0, 6);
-    const visibleCount = 3;
+    const isMobile = useIsMobile(640);
+    const isTablet = useIsMobile(1024);
+    const visibleCount = isMobile ? 1 : isTablet ? 2 : 3;
 
     useEffect(() => {
         const galleryImages = [
@@ -114,7 +117,7 @@ export default function StatsSection({ scrollYProgress, showOnly }: { scrollYPro
                             </h3>
                             <p className="text-muted-foreground/60 font-medium uppercase tracking-widest text-xs">Articles • Insights • Technical Deep Dives</p>
                         </div>
-                        <Link href="/blog" className="hidden md:flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-muted-foreground/40 hover:text-foreground transition-colors group">
+                        <Link href="/blog" className="flex items-center gap-2 text-[10px] md:text-xs font-bold uppercase tracking-widest text-muted-foreground/40 hover:text-foreground transition-colors group">
                             Browse Full Archive
                             <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                         </Link>
@@ -122,7 +125,7 @@ export default function StatsSection({ scrollYProgress, showOnly }: { scrollYPro
 
                     <div className="relative group/slider flex items-center justify-center">
                         {/* Navigation Buttons - Positioned relatively to the container */}
-                        <div className="absolute left-0 top-[35%] -translate-y-1/2 z-30 hidden lg:block">
+                        <div className="absolute left-0 top-[35%] -translate-y-1/2 z-30 block scale-75 lg:scale-100 origin-left">
                             <button
                                 onClick={prevSlide}
                                 className="p-4 rounded-full bg-muted/10 border border-border/50 text-foreground transition-all hover:bg-muted/20 hover:scale-110 active:scale-95"
@@ -131,7 +134,7 @@ export default function StatsSection({ scrollYProgress, showOnly }: { scrollYPro
                             </button>
                         </div>
 
-                        <div className="absolute right-0 top-[35%] -translate-y-1/2 z-30 hidden lg:block">
+                        <div className="absolute right-0 top-[35%] -translate-y-1/2 z-30 block scale-75 lg:scale-100 origin-right">
                             <button
                                 onClick={nextSlide}
                                 className="p-4 rounded-full bg-muted/10 border border-border/50 text-foreground transition-all hover:bg-muted/20 hover:scale-110 active:scale-95"
@@ -140,24 +143,8 @@ export default function StatsSection({ scrollYProgress, showOnly }: { scrollYPro
                             </button>
                         </div>
 
-                        {/* Mobile Navigation */}
-                        <div className="absolute inset-x-0 top-[35%] -translate-y-1/2 z-30 flex justify-between px-2 lg:hidden">
-                            <button
-                                onClick={prevSlide}
-                                className="p-3 rounded-full bg-background/80 backdrop-blur-sm border border-border/50 text-foreground"
-                            >
-                                <ChevronLeft className="w-5 h-5" />
-                            </button>
-                            <button
-                                onClick={nextSlide}
-                                className="p-3 rounded-full bg-background/80 backdrop-blur-sm border border-border/50 text-foreground"
-                            >
-                                <ChevronRight className="w-5 h-5" />
-                            </button>
-                        </div>
-
                         <div className="overflow-visible w-full lg:max-w-[1400px] mx-auto px-4 md:px-12">
-                            <div className="flex gap-8 md:gap-24 justify-center pt-12 pb-32 min-h-[600px] items-start relative">
+                            <div className="flex gap-6 sm:gap-8 md:gap-12 lg:gap-24 justify-center pt-12 pb-32 min-h-[450px] sm:min-h-[500px] md:min-h-[600px] items-start relative">
                                 <AnimatePresence mode="popLayout" initial={false}>
                                     {getVisibleBlogs().map((blog, index) => (
                                         <motion.div
@@ -171,7 +158,7 @@ export default function StatsSection({ scrollYProgress, showOnly }: { scrollYPro
                                                 stiffness: 260,
                                                 damping: 26,
                                             }}
-                                            className="group relative w-[200px] md:w-[260px] flex-shrink-0"
+                                            className="group relative w-[180px] sm:w-[200px] md:w-[260px] flex-shrink-0"
                                         >
                                             <Link href={`/blog/${blog.slug}`} className="block relative z-10 group/book">
                                                 {/* Glow Effect - Inside Link for better hover detection */}
@@ -216,12 +203,7 @@ export default function StatsSection({ scrollYProgress, showOnly }: { scrollYPro
                         </div>
                     </div>
 
-                    <div className="flex justify-center md:hidden pt-8">
-                        <Link href="/blog" className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-muted-foreground/40 hover:text-foreground transition-colors group">
-                            Browse Full Archive
-                            <ArrowUpRight className="w-4 h-4" />
-                        </Link>
-                    </div>
+
                 </div>
             )}
         </section>

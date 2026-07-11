@@ -19,7 +19,31 @@ export async function GET() {
         ]);
         
         if (!profileRes.ok || !solvedRes.ok) {
-            throw new Error(`LeetCode API responded with an error`);
+            console.warn(`LeetCode API responded with an error. Returning fallback data.`);
+            return NextResponse.json({
+                profile: {
+                    realName: username,
+                    aboutMe: "LeetCode stats currently unavailable.",
+                    company: null,
+                    school: null,
+                    countryName: null,
+                    ranking: 0,
+                    reputation: 0,
+                    starRating: 0
+                },
+                stats: {
+                    totalSolved: 0,
+                    easySolved: 0,
+                    mediumSolved: 0,
+                    hardSolved: 0,
+                    totalSubmissions: 0,
+                    acSubmissions: 0,
+                    acceptanceRate: "0.0"
+                },
+                calendar: {},
+                badges: [],
+                languageStats: []
+            });
         }
 
         const profileData = await profileRes.json();
@@ -31,7 +55,31 @@ export async function GET() {
         const languageData = languageRes.ok ? await languageRes.json() : { languageProblemCount: [] };
         
         if (profileData.errors || solvedData.errors) {
-            throw new Error('User does not exist or API error');
+            console.warn('User does not exist or API returned GraphQL error. Returning fallback data.');
+            return NextResponse.json({
+                profile: {
+                    realName: username,
+                    aboutMe: "LeetCode stats currently unavailable.",
+                    company: null,
+                    school: null,
+                    countryName: null,
+                    ranking: 0,
+                    reputation: 0,
+                    starRating: 0
+                },
+                stats: {
+                    totalSolved: 0,
+                    easySolved: 0,
+                    mediumSolved: 0,
+                    hardSolved: 0,
+                    totalSubmissions: 0,
+                    acSubmissions: 0,
+                    acceptanceRate: "0.0"
+                },
+                calendar: {},
+                badges: [],
+                languageStats: []
+            });
         }
 
         const totalSubmissions = solvedData.totalSubmissionNum?.[0]?.submissions || 0;

@@ -51,6 +51,7 @@ const useNavItems = () => {
     return [
         {
             label: "About",
+            href: "/#about",
             links: [
                 { label: t('achievements'), href: "/achievements", description: t('achievementsDesc') },
                 { label: t('skills'), href: "/skills", description: t('skillsDesc') },
@@ -278,9 +279,15 @@ export function Navbar() {
                                     {/* Mobile Links grouped by Categories */}
                                     {navItems.map((category) => (
                                         <div key={category.label} className="flex flex-col items-center gap-4 py-4 border-b border-white/5 w-full last:border-0 text-center">
-                                            <span className="text-[10px] font-black font-mono text-primary tracking-[0.3em] uppercase opacity-50">
-                                                {category.label}
-                                            </span>
+                                            {category.href ? (
+                                                <Link href={category.href} onClick={closeMenu} className="text-xl sm:text-2xl font-black text-foreground hover:text-primary transition-colors uppercase tracking-widest mb-2">
+                                                    {category.label}
+                                                </Link>
+                                            ) : (
+                                                <span className="text-[10px] font-black font-mono text-primary tracking-[0.3em] uppercase opacity-50">
+                                                    {category.label}
+                                                </span>
+                                            )}
                                             {category.links.map((link) => (
                                                 <Link
                                                     key={link.label}
