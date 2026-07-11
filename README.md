@@ -14,7 +14,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![Three.js](https://img.shields.io/badge/Three.js-0.170-000000?style=for-the-badge&logo=threedotjs&logoColor=white)](https://threejs.org/)
 
-[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Visit_Portfolio-6366f1?style=for-the-badge)](https://personal-blog-aamod.vercel.app)
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Visit_Portfolio-6366f1?style=for-the-badge)](https://personal-blog-xi-six.vercel.app)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/aamod-kumar/)
 
 ---
