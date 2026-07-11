@@ -6,7 +6,7 @@ import { HorizontalTimeline, TimelineEntry } from '@/components/ui/horizontal-ti
 import { formatDate } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, ArrowRight } from 'lucide-react';
 
 export function JourneySection() {
     const journeyData = useMemo<TimelineEntry[]>(() => {
@@ -62,16 +62,19 @@ export function JourneySection() {
             title: 'View More',
             isEnd: true,
             content: (
-                <Link className="relative flex items-center h-[140px] w-[250px] z-30 group" href="/experience">
+                <a 
+                    className="relative flex items-center h-[140px] w-[250px] z-30 group cursor-pointer" 
+                    href="/experience"
+                >
                     <div className="flex items-center gap-4">
-                        <div className="p-4 rounded-full bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 shadow-sm flex items-center justify-center transition-all duration-500 group-hover:bg-primary group-hover:border-primary group-hover:shadow-[0_0_20px_rgba(var(--primary),0.3)]">
-                            <ArrowUpRight className="w-6 h-6 text-neutral-500 group-hover:text-primary-foreground transition-colors" />
+                        <div className="w-16 h-16 rounded-full bg-neutral-200 dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-800 shadow-sm flex items-center justify-center transition-all duration-500 group-hover:bg-white group-hover:border-white group-hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] group-hover:scale-110">
+                            <ArrowRight className="w-6 h-6 text-neutral-500 dark:text-neutral-400 -rotate-45 group-hover:rotate-0 group-hover:text-black transition-all duration-500" />
                         </div>
                         <span className="text-lg md:text-xl font-bold text-neutral-900 dark:text-white opacity-0 -translate-x-4 transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-0 whitespace-nowrap drop-shadow-sm">
                             View more
                         </span>
                     </div>
-                </Link>
+                </a>
             )
         });
 
