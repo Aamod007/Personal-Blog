@@ -30,6 +30,7 @@ import { GitHubShowcase } from "@/components/ui/github-showcase";
 import KaggleShowcase from "@/components/ui/kaggle-showcase";
 import { LeetCodeShowcase } from "@/components/ui/leetcode-showcase";
 import { ShowcaseStack } from "@/components/ui/showcase-stack";
+import { JourneySection } from "./JourneySection";
 
 
 
@@ -544,6 +545,7 @@ export default function AboutSection() {
                     <ArgentLoopInfiniteSlider />
                     {/* Seamless solid background section overlapping the slider's dead space */}
                     <div className="-mt-[50vh] flex flex-col items-center w-full bg-background relative z-20 pt-32 pb-32">
+                        <JourneySection />
                         <motion.div
                             initial={{ opacity: 0, scale: 0.98, filter: "blur(10px)" }}
                             whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}

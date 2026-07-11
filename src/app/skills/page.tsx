@@ -4,7 +4,7 @@ import { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform, useAnimationFrame, useMotionValue } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { portfolioData } from '@/data/portfolio';
-import { SplineScene } from '@/components/ui/SplineScene';
+const SplineScene = dynamic(() => import('@/components/ui/SplineScene').then(mod => mod.SplineScene), { ssr: false });
 import { TextPressure } from '@/components/ui/TextPressure';
 import dynamic from 'next/dynamic';
 

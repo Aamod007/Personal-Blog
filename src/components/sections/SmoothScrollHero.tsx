@@ -22,7 +22,7 @@ export const SmoothScrollHero = () => {
 
 const SECTION_HEIGHT = 1500;
 
-const Hero = ({ isLowPowerMode }: { isLowPowerMode: boolean }) => {
+const Hero = ({ isLowPowerMode }: {  isLowPowerMode: boolean }) => {
     const { scrollY } = useScroll();
 
     // Simplify physics for low power mode

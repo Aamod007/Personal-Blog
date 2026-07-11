@@ -25,7 +25,6 @@ const Footer = dynamic(() => import("@/components/layout/Footer").then(mod => mo
 });
 
 const Hyperspeed = dynamic(() => import('@/components/ui/Hyperspeed'), { ssr: false });
-const { hyperspeedPresets } = require('@/components/ui/Hyperspeed');
 
 const Scene3D = dynamic(() => import('@/components/three/Scene3D').then(mod => ({ default: mod.Scene3D })), {
     ssr: false,

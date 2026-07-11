@@ -312,14 +312,27 @@ export function ArgentLoopInfiniteSlider() {
               </div>
             </motion.div>
 
-            <div className="h-[200px] w-full flex items-center justify-center pt-10">
+            <div className="h-[200px] w-full flex items-center justify-center pt-10 relative">
+              {/* Giant Background Text Effect */}
               <motion.div
+                className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden w-full"
+                style={{
+                  opacity: useTransform(smoothProgress, [projectArea, projectArea + 0.05], [0, 0.04]),
+                }}
+              >
+                <h2 className="text-[clamp(3rem,8vw,10rem)] font-black text-foreground tracking-tighter leading-[0.8] text-center uppercase max-w-[90vw] text-wrap">
+                  {PROJECT_DATA[PROJECT_DATA.length - 1]?.title}
+                </h2>
+              </motion.div>
+
+              <motion.div
+                className="z-10 relative w-full flex items-center justify-center"
                 style={{
                   opacity: buttonOpacity,
                   pointerEvents: useTransform(smoothProgress, (v) => v > projectArea ? "auto" : "none")
                 }}
               >
-                <div className="flex items-center gap-4 pointer-events-auto">
+                <div className="flex items-center gap-4 pointer-events-auto flex-wrap justify-center">
                   <MagneticEffect>
                     <a
                       href="https://github.com/Aamod007"
