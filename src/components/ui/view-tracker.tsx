@@ -3,9 +3,75 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useMotionValue, animate, useTransform } from 'framer-motion';
 import { Bot, BarChart2, Users, Eye, Activity } from 'lucide-react';
+import { useTheme } from 'next-themes';
 import { cn } from '@/lib/utils';
 
+function GridSnake({ isDark }: { isDark: boolean }) {
+    const [pathX, setPathX] = useState<number[]>([]);
+    const [pathY, setPathY] = useState<number[]>([]);
+    
+    useEffect(() => {
+        const cols = 16;
+        const rows = 5;
+        const gridSize = 16;
+        
+        let x = Math.floor(Math.random() * cols) * gridSize;
+        let y = Math.floor(Math.random() * rows) * gridSize;
+        
+        const px = [x];
+        const py = [y];
+        
+        for (let i = 0; i < 40; i++) {
+            const isHorizontal = Math.random() > 0.5;
+            const step = (Math.random() > 0.5 ? 1 : -1) * gridSize;
+            
+            if (isHorizontal) {
+                x += step;
+                if (x < 0) x = (cols - 1) * gridSize;
+                else if (x >= cols * gridSize) x = 0;
+            } else {
+                y += step;
+                if (y < 0) y = (rows - 1) * gridSize;
+                else if (y >= rows * gridSize) y = 0;
+            }
+            
+            px.push(x);
+            py.push(y);
+        }
+        setPathX(px);
+        setPathY(py);
+    }, []);
+
+    if (pathX.length === 0) return null;
+
+    return (
+        <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30 group-hover:opacity-100 transition-opacity duration-700">
+            {[...Array(4)].map((_, i) => (
+                <motion.div
+                    key={i}
+                    className={cn(
+                        "absolute top-0 left-0 w-[16px] h-[16px]",
+                        isDark ? (i === 0 ? "bg-white/20" : "bg-white/10") : (i === 0 ? "bg-black/20" : "bg-black/10")
+                    )}
+                    animate={{
+                        x: pathX,
+                        y: pathY,
+                    }}
+                    transition={{
+                        duration: 15,
+                        repeat: Infinity,
+                        ease: "linear",
+                        delay: i * 0.15
+                    }}
+                />
+            ))}
+        </div>
+    )
+}
+
 export function ViewTracker() {
+    const { resolvedTheme } = useTheme();
+    const isDark = resolvedTheme === 'dark';
     const [isOpen, setIsOpen] = useState(false);
     const countTotal = useMotionValue(0);
     const countUnique = useMotionValue(0);
@@ -40,7 +106,10 @@ export function ViewTracker() {
         >
             {/* Main Button */}
             <motion.button
-                className="flex items-center gap-2 md:gap-3 px-3 py-2 md:px-4 md:py-2.5 rounded-full border border-border/50 bg-background/50 backdrop-blur-sm hover:bg-muted/50 transition-colors"
+                className={cn(
+                    "flex items-center gap-2 md:gap-3 px-3 py-2 md:px-4 md:py-2.5 rounded-full border transition-colors",
+                    isDark ? "bg-[#161616] border-white/10 hover:bg-[#1f1f1f] hover:border-white/20" : "bg-white border-black/10 hover:bg-black/[0.02] hover:border-black/20"
+                )}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => setIsOpen(!isOpen)}
@@ -59,12 +128,18 @@ export function ViewTracker() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2, ease: "easeOut" }}
-                        className="absolute right-0 top-full mt-2 w-72 rounded-2xl border border-border/50 bg-background/80 backdrop-blur-xl shadow-2xl overflow-hidden z-50 p-5"
+                        className={cn(
+                            "absolute right-0 top-full mt-2 w-72 rounded-2xl border shadow-2xl overflow-hidden z-50 p-5",
+                            isDark ? "bg-[#0a0a0a] border-white/10 shadow-black/80" : "bg-white border-black/10 shadow-black/5"
+                        )}
                     >
                         {/* Header */}
                         <div className="flex justify-between items-start mb-6">
                             <div>
-                                <h4 className="text-xs font-bold tracking-[0.2em] text-foreground/80 mb-1">
+                                <h4 className={cn(
+                                    "text-xs font-bold tracking-[0.2em] mb-1 transition-colors duration-300",
+                                    isDark ? "text-white" : "text-black"
+                                )}>
                                     TRAFFIC INSIGHTS
                                 </h4>
                                 <p className="text-[10px] font-mono tracking-widest text-muted-foreground/60 uppercase">
@@ -76,60 +151,89 @@ export function ViewTracker() {
                         
                         <div className="h-[1px] w-full bg-border/50 mb-6" />
 
-                        {/* Stats List */}
-                        <div className="flex flex-col gap-5">
+                        {/* Stats List - Bento Style */}
+                        <div className="grid grid-cols-2 gap-3">
                             {/* Session */}
-                            <div className="flex items-center gap-4">
-                                <div className="w-10 h-10 rounded-xl bg-muted/50 flex items-center justify-center flex-shrink-0">
-                                    <BarChart2 className="w-5 h-5 text-foreground/80" />
-                                </div>
-                                <div>
-                                    <p className="text-xs font-bold tracking-widest text-muted-foreground/80 uppercase mb-0.5">
+                            <div className={cn(
+                                "col-span-2 group relative flex items-center justify-between rounded-2xl border p-4 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-1 overflow-hidden",
+                                isDark ? "bg-[#161616] hover:bg-[#1f1f1f] border-white/10 hover:border-white/20 hover:shadow-xl hover:shadow-black/50" : "bg-black/[0.02] hover:bg-white border-black/10 hover:border-black/20 hover:shadow-xl hover:shadow-black/10"
+                            )}>
+                                {/* Subtle Grid Background */}
+                                <div className="absolute inset-0 opacity-[0.04] pointer-events-none" style={{ backgroundImage: 'linear-gradient(to right, currentColor 1px, transparent 1px), linear-gradient(to bottom, currentColor 1px, transparent 1px)', backgroundSize: '16px 16px' }} />
+                                
+                                {/* Random Snake Animation */}
+                                <GridSnake isDark={isDark} />
+                                
+                                <div className="relative z-10">
+                                    <p className={cn(
+                                        "font-bold text-sm mb-1 transition-colors duration-300",
+                                        isDark ? "text-white" : "text-black"
+                                    )}>
                                         Session
                                     </p>
-                                    <p className="text-sm font-black text-emerald-500 tracking-widest uppercase">
+                                    <p className="text-[11px] font-bold leading-relaxed text-emerald-500">
                                         Tracked
                                     </p>
+                                </div>
+                                <div className="relative z-10 flex items-center justify-center transition-colors">
+                                    <BarChart2 className={cn("w-5 h-5 transition-all duration-500 group-hover:scale-110 group-hover:-rotate-3", isDark ? "text-white/40 group-hover:text-white/80" : "text-black/40 group-hover:text-black/80")} />
                                 </div>
                             </div>
 
                             {/* Unique Visitors */}
-                            <div className="flex items-center gap-4">
-                                <div className="w-10 h-10 rounded-xl bg-muted/50 flex items-center justify-center flex-shrink-0">
-                                    <Users className="w-5 h-5 text-foreground/80" />
-                                </div>
-                                <div>
-                                    <p className="text-xs font-bold tracking-widest text-muted-foreground/80 uppercase mb-0.5">
-                                        Unique Visitors
-                                    </p>
-                                    <p className="text-sm font-black text-foreground tracking-widest">
-                                        <motion.span>{displayUnique}</motion.span>
-                                    </p>
+                            <div className={cn(
+                                "group relative flex flex-col justify-center rounded-2xl border p-4 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-1 overflow-hidden",
+                                isDark ? "bg-[#161616] hover:bg-[#1f1f1f] border-white/10 hover:border-white/20 hover:shadow-xl hover:shadow-black/50" : "bg-black/[0.02] hover:bg-white border-black/10 hover:border-black/20 hover:shadow-xl hover:shadow-black/10"
+                            )}>
+                                <div className="flex items-start justify-between relative z-10">
+                                    <div>
+                                        <p className={cn(
+                                            "font-bold text-sm mb-1.5 transition-colors duration-300",
+                                            isDark ? "text-white" : "text-black"
+                                        )}>
+                                            Unique
+                                        </p>
+                                        <p className={cn(
+                                            "text-[11px] font-medium leading-relaxed transition-colors duration-300",
+                                            isDark ? "text-white/60 group-hover:text-white/80" : "text-black/60 group-hover:text-black/80"
+                                        )}>
+                                            <motion.span>{displayUnique}</motion.span> views
+                                        </p>
+                                    </div>
+                                    <div className={cn("p-1.5 rounded-xl transition-colors duration-300", isDark ? "group-hover:bg-white/10" : "group-hover:bg-black/5")}>
+                                        <Users className={cn("w-4 h-4 mt-0.5 flex-shrink-0 transition-transform duration-500 group-hover:scale-125 group-hover:rotate-12", isDark ? "text-white/40 group-hover:text-white/80" : "text-black/40 group-hover:text-black/80")} />
+                                    </div>
                                 </div>
                             </div>
 
                             {/* Total Views */}
-                            <div className="flex items-center gap-4">
-                                <div className="w-10 h-10 rounded-xl bg-muted/50 flex items-center justify-center flex-shrink-0">
-                                    <Eye className="w-5 h-5 text-foreground/80" />
-                                </div>
-                                <div>
-                                    <p className="text-xs font-bold tracking-widest text-muted-foreground/80 uppercase mb-0.5">
-                                        Total Views
-                                    </p>
-                                    <p className="text-sm font-black text-foreground tracking-widest">
-                                        <motion.span>{displayTotal}</motion.span>
-                                    </p>
+                            <div className={cn(
+                                "group relative flex flex-col justify-center rounded-2xl border p-4 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-1 overflow-hidden",
+                                isDark ? "bg-[#161616] hover:bg-[#1f1f1f] border-white/10 hover:border-white/20 hover:shadow-xl hover:shadow-black/50" : "bg-black/[0.02] hover:bg-white border-black/10 hover:border-black/20 hover:shadow-xl hover:shadow-black/10"
+                            )}>
+                                <div className="flex items-start justify-between relative z-10">
+                                    <div>
+                                        <p className={cn(
+                                            "font-bold text-sm mb-1.5 transition-colors duration-300",
+                                            isDark ? "text-white" : "text-black"
+                                        )}>
+                                            Total
+                                        </p>
+                                        <p className={cn(
+                                            "text-[11px] font-medium leading-relaxed transition-colors duration-300",
+                                            isDark ? "text-white/60 group-hover:text-white/80" : "text-black/60 group-hover:text-black/80"
+                                        )}>
+                                            <motion.span>{displayTotal}</motion.span> views
+                                        </p>
+                                    </div>
+                                    <div className={cn("p-1.5 rounded-xl transition-colors duration-300", isDark ? "group-hover:bg-white/10" : "group-hover:bg-black/5")}>
+                                        <Eye className={cn("w-4 h-4 mt-0.5 flex-shrink-0 transition-transform duration-500 group-hover:scale-125 group-hover:rotate-12", isDark ? "text-white/40 group-hover:text-white/80" : "text-black/40 group-hover:text-black/80")} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Footer */}
-                        <div className="mt-6 pt-4 border-t border-border/50 text-center">
-                            <p className="text-[9px] font-mono tracking-[0.2em] text-muted-foreground/40 uppercase">
-                                Live counts from Upstash Redis
-                            </p>
-                        </div>
+
                     </motion.div>
                 )}
             </AnimatePresence>
