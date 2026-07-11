@@ -12,10 +12,10 @@ export function ViewTracker() {
     const [isLoaded, setIsLoaded] = useState(false);
 
     const displayTotal = useTransform(countTotal, (latest) => 
-        isLoaded ? Math.round(latest).toLocaleString() : '...'
+        isLoaded ? Math.round(latest).toLocaleString() : '0'
     );
     const displayUnique = useTransform(countUnique, (latest) => 
-        isLoaded ? Math.round(latest).toLocaleString() : '...'
+        isLoaded ? Math.round(latest).toLocaleString() : '0'
     );
 
     useEffect(() => {
