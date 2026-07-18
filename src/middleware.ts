@@ -2,15 +2,6 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 export default function middleware(request: NextRequest) {
-    const userAgent = request.headers.get('user-agent') || '';
-
-    // Check for mobile devices
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
-
-    if (isMobile) {
-        return NextResponse.redirect('https://aamodworkspace.vercel.app/');
-    }
-
     return NextResponse.next();
 }
 
